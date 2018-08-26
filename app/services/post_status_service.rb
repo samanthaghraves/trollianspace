@@ -23,8 +23,10 @@ class PostStatusService < BaseService
     status = nil
     text   = options.delete(:spoiler_text) if text.blank? && options[:spoiler_text].present?
 
+    quirkified_text = quirkify_text(account, text)
+
     ApplicationRecord.transaction do
-      status = account.statuses.create!(text: text,
+      status = account.statuses.create!(text: quirkified_text,
                                         media_attachments: media || [],
                                         thread: in_reply_to,
                                         sensitive: (options[:sensitive].nil? ? account.user&.setting_default_sensitive : options[:sensitive]) || options[:spoiler_text].present?,
@@ -90,5 +92,29 @@ class PostStatusService < BaseService
     ActivityTracker.increment('activity:interactions')
     return if account.following?(status.in_reply_to_account_id)
     PotentialFriendshipTracker.record(account.id, status.in_reply_to_account_id, :reply)
+  end
+   
+    def quirkify_text(account, text)
+    result = text
+    quirks = account.quirk.split(',')
+    regexes = account.regex.split(',')
+    
+    if quirks.length == regexes.length
+      qrs = quirks.zip(regexes)
+      result = result.split.reduce("") do |acc_res, curr|
+        if not Account::MENTION_RE.match?(curr)
+          acc_res + " " + qrs.reduce(curr) { |acc, qr|
+            quirk, regex = qr
+            if (not quirk.empty?) && (not regex.empty?)
+              acc = acc.gsub(Regexp.new(regex), quirk)
+            end
+            acc  
+          }
+        else acc_res + " " + curr
+        end
+      end
+    end
+
+    result
   end
 end

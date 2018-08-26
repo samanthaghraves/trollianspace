@@ -46,6 +46,8 @@
 #  featured_collection_url :string
 #  fields                  :jsonb
 #  actor_type              :string
+#  quirk		   :text
+#  regex		   :text
 #
 
 class Account < ApplicationRecord

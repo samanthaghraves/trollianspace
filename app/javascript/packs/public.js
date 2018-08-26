@@ -75,6 +75,38 @@ function main() {
   });
 }
 
+
+  const MAX_QUIRK_LENGTH = 30; // ???
+
+  delegate(document, '#account_quirk', 'input', ({ target }) => {
+    const quirkCounter = document.querySelector('.quirk-counter');
+                                                            // Not sure about this selector...
+                                                            // just copying the display name one above...
+    const quirk         = document.querySelector('.card .quirk strong');
+
+    if (quirkCounter) {
+      quirkCounter.textContent = MAX_QUIRK_LENGTH - length(target.value);
+    }
+
+    if (quirk) {
+      quirk.innerHTML = target.value; // probably shouldn't need to emojify this, right?
+    }
+  });
+
+  const MAX_REGEX_LENGTH = 30; // ???
+   delegate(document, '#account_regex', 'input', ({ target }) => {
+    const regexCounter = document.querySelector('.regex-counter');
+    // Not sure about this selector...
+    // just copying the display name one above...
+    const regex         = document.querySelector('.card .regex strong');
+     if (regexCounter) {
+      regexCounter.textContent = MAX_REGEX_LENGTH - length(target.value);
+    }
+     if (regex) {
+      regex.innerHTML = target.value; // probably shouldn't need to emojify this, right?
+    }
+  });
+
 loadPolyfills().then(main).catch(error => {
   console.error(error);
 });
