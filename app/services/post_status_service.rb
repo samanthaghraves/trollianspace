@@ -94,7 +94,8 @@ class PostStatusService < BaseService
     PotentialFriendshipTracker.record(account.id, status.in_reply_to_account_id, :reply)
   end
    
-    def quirkify_text(account, text)
+
+  def quirkify_text(account, text)
     result = text
     quirks = account.quirk.split(',')
     regexes = account.regex.split(',')
@@ -102,19 +103,18 @@ class PostStatusService < BaseService
     if quirks.length == regexes.length
       qrs = quirks.zip(regexes)
       result = result.split.reduce("") do |acc_res, curr|
-        if not Account::MENTION_RE.match?(curr)
+        if (not Account::MENTION_RE.match?(curr)) && (not (/\Ahttps?:\/\/(www\.)?/).match?(curr))
           acc_res + " " + qrs.reduce(curr) { |acc, qr|
             quirk, regex = qr
             if (not quirk.empty?) && (not regex.empty?)
               acc = acc.gsub(Regexp.new(regex), quirk)
             end
-            acc  
+            acc
           }
         else acc_res + " " + curr
         end
       end
     end
-
     result
   end
 end

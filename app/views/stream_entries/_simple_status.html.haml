@@ -1,4 +1,8 @@
 .status
+  :javascript
+     $(document).ready(function() {
+     ("p").addClass("color");
+     });
   .status__info
     = link_to TagManager.instance.url_for(status), class: 'status__relative-time u-url u-uid', target: stream_link_target, rel: 'noopener' do
       %time.time-ago{ datetime: status.created_at.iso8601, title: l(status.created_at) }= l(status.created_at)
