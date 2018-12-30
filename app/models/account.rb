@@ -46,6 +46,8 @@
 #  featured_collection_url :string
 #  fields                  :jsonb
 #  actor_type              :string
+#  quirk		   :text
+#  regex                   :text
 #
 
 class Account < ApplicationRecord
@@ -75,7 +77,8 @@ class Account < ApplicationRecord
   validates_with UniqueUsernameValidator, if: -> { local? && will_save_change_to_username? }
   validates_with UnreservedUsernameValidator, if: -> { local? && will_save_change_to_username? }
   validates :display_name, length: { maximum: 30 }, if: -> { local? && will_save_change_to_display_name? }
-  validates :note, length: { maximum: 160 }, if: -> { local? && will_save_change_to_note? }
+  validates :note, length: { maximum: 413 }, if: -> { local? && will_save_change_to_note? }
+  validate :note_has_fifteen_newlines?, if: -> { local? && will_save_change_to_note? }
   validates :fields, length: { maximum: 4 }, if: -> { local? && will_save_change_to_fields? }
 
   # Timelines
@@ -279,10 +282,8 @@ class Account < ApplicationRecord
   def save_with_optional_media!
     save!
   rescue ActiveRecord::RecordInvalid
-    self.avatar              = nil
-    self.header              = nil
-    self[:avatar_remote_url] = ''
-    self[:header_remote_url] = ''
+    self.avatar = nil if errors[:avatar].present?
+    self.header = nil if errors[:header].present?
     save!
   end
 
@@ -304,6 +305,10 @@ class Account < ApplicationRecord
 
   def preferred_inbox_url
     shared_inbox_url.presence || inbox_url
+  end
+
+  def note_has_fifteen_newlines?
+    errors.add(:note, 'Bio can\'t have more then 15 newlines') unless note.count("\n") <= 15
   end
 
   class Field < ActiveModelSerializers::Model

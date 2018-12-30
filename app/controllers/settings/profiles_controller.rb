@@ -29,7 +29,7 @@ class Settings::ProfilesController < ApplicationController
   private
 
   def account_params
-    params.require(:account).permit(:display_name, :note, :avatar, :header, :locked, :bot, fields_attributes: [:name, :value])
+    params.require(:account).permit(:display_name, :quirk, :regex,  :note, :avatar, :header, :locked, :bot, fields_attributes: [:name, :value])
   end
 
   def set_account

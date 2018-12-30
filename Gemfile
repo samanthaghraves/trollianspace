@@ -88,6 +88,7 @@ gem 'twitter-text', '~> 1.14'
 gem 'tzinfo-data', '~> 1.2018'
 gem 'webpacker', '~> 3.5'
 gem 'webpush'
+gem 'ruby-bbcode'
 
 gem 'json-ld', '~> 2.2'
 gem 'json-ld-preloaded', '~> 2.2'

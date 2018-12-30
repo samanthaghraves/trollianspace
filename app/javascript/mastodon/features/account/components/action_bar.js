@@ -34,6 +34,7 @@ const messages = defineMessages({
   mutes: { id: 'navigation_bar.mutes', defaultMessage: 'Muted users' },
   endorse: { id: 'account.endorse', defaultMessage: 'Feature on profile' },
   unendorse: { id: 'account.unendorse', defaultMessage: 'Don\'t feature on profile' },
+  rules: { id: 'account.rules', defaultMessage: 'Rules' },
 });
 
 export default @injectIntl
@@ -85,6 +86,7 @@ class ActionBar extends React.PureComponent {
     }
 
     if (account.get('id') === me) {
+      menu.push({ text: intl.formatMessage(messages.rules), href: '/about/more' });
       menu.push({ text: intl.formatMessage(messages.edit_profile), href: '/settings/profile' });
       menu.push({ text: intl.formatMessage(messages.preferences), href: '/settings/preferences' });
       menu.push({ text: intl.formatMessage(messages.pins), to: '/pinned' });
@@ -171,7 +173,7 @@ class ActionBar extends React.PureComponent {
           </div>
 
           <div className='account__action-bar-dropdown'>
-            <DropdownMenuContainer items={menu} icon='ellipsis-v' size={24} direction='right' />
+            <DropdownMenuContainer items={menu} icon='ellipsis-v' size={32} direction='right' />
           </div>
         </div>
       </div>

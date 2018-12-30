@@ -1,3 +1,10 @@
-default: styles/application.scss
+default: styles/trollian.scss
+Trollian: styles/TrollianDark.scss
+NewAlternian: styles/newalternian.scss
+homestuck: styles/homestuck.scss
+alternian: styles/theme-alternian.scss
+burgandy: styles/burgandy.scss
 contrast: styles/contrast.scss
 mastodon-light: styles/mastodon-light.scss
+single: styles/single.scss
+test: styles/test.scss
