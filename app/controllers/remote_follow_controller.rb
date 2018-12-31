@@ -4,6 +4,7 @@ class RemoteFollowController < ApplicationController
   layout 'modal'
 
   before_action :set_account
+  before_action :set_pack
   before_action :gone, if: :suspended_account?
   before_action :set_body_classes
 
@@ -30,6 +31,10 @@ class RemoteFollowController < ApplicationController
 
   def session_params
     { acct: session[:remote_follow] }
+  end
+
+  def set_pack
+    use_pack 'modal'
   end
 
   def set_account

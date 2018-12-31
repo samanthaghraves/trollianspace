@@ -6,7 +6,11 @@ class InvitesController < ApplicationController
   layout 'admin'
 
   before_action :authenticate_user!
+<<<<<<< HEAD
   before_action :set_body_classes
+=======
+  before_action :set_pack
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 
   def index
     authorize :invite, :create?
@@ -37,6 +41,10 @@ class InvitesController < ApplicationController
   end
 
   private
+
+  def set_pack
+    use_pack 'settings'
+  end
 
   def invites
     Invite.where(user: current_user).order(id: :desc)

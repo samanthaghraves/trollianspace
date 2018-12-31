@@ -4,6 +4,7 @@ import { start } from '../mastodon/common';
 
 start();
 
+<<<<<<< HEAD
 window.addEventListener('message', e => {
   const data = e.data || {};
 
@@ -25,6 +26,8 @@ window.addEventListener('message', e => {
   });
 });
 
+=======
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 function main() {
   const IntlMessageFormat = require('intl-messageformat').default;
   const { timeAgoString } = require('../mastodon/components/relative_timestamp');
@@ -109,51 +112,32 @@ function main() {
       sizeBioText();
     }
   });
+}
 
-  delegate(document, '.webapp-btn', 'click', ({ target, button }) => {
-    if (button !== 0) {
-      return true;
-    }
-    window.location.href = target.href;
-    return false;
-  });
 
-  delegate(document, '.status__content__spoiler-link', 'click', ({ target }) => {
-    const contentEl = target.parentNode.parentNode.querySelector('.e-content');
+  const MAX_QUIRK_LENGTH = 30; // ???
 
-    if (contentEl.style.display === 'block') {
-      contentEl.style.display = 'none';
-      target.parentNode.style.marginBottom = 0;
-    } else {
-      contentEl.style.display = 'block';
-      target.parentNode.style.marginBottom = null;
-    }
-
-    return false;
-  });
-
-  delegate(document, '.modal-button', 'click', e => {
-    e.preventDefault();
-
-    let href;
-
-    if (e.target.nodeName !== 'A') {
-      href = e.target.parentNode.href;
-    } else {
-      href = e.target.href;
-    }
-
-    window.open(href, 'mastodon-intent', 'width=445,height=600,resizable=no,menubar=no,status=no,scrollbars=yes');
-  });
-
+<<<<<<< HEAD
   delegate(document, '#account_display_name', 'input', ({ target }) => {
     const name = document.querySelector('.card .display-name strong');
+=======
+  delegate(document, '#account_quirk', 'input', ({ target }) => {
+    const quirkCounter = document.querySelector('.quirk-counter');
+                                                            // Not sure about this selector...
+                                                            // just copying the display name one above...
+    const quirk         = document.querySelector('.card .quirk strong');
 
-    if (name) {
-      name.innerHTML = emojify(target.value);
+    if (quirkCounter) {
+      quirkCounter.textContent = MAX_QUIRK_LENGTH - length(target.value);
+    }
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
+
+    if (quirk) {
+      quirk.innerHTML = target.value; // probably shouldn't need to emojify this, right?
     }
   });
 
+<<<<<<< HEAD
   delegate(document, '#account_avatar', 'change', ({ target }) => {
     const avatar = document.querySelector('.card .avatar img');
     const [file] = target.files || [];
@@ -219,6 +203,21 @@ function main() {
     }
   }
 }
+=======
+  const MAX_REGEX_LENGTH = 30; // ???
+   delegate(document, '#account_regex', 'input', ({ target }) => {
+    const regexCounter = document.querySelector('.regex-counter');
+    // Not sure about this selector...
+    // just copying the display name one above...
+    const regex         = document.querySelector('.card .regex strong');
+     if (regexCounter) {
+      regexCounter.textContent = MAX_REGEX_LENGTH - length(target.value);
+    }
+     if (regex) {
+      regex.innerHTML = target.value; // probably shouldn't need to emojify this, right?
+    }
+  });
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 
   const MAX_QUIRK_LENGTH = 200; // ???
    delegate(document, '#account_quirk', 'input', ({ target }) => {

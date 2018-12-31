@@ -1,6 +1,6 @@
-![Mastodon](https://i.imgur.com/NhZc40l.png)
-========
+#  Mastodon Glitch Edition  #
 
+<<<<<<< HEAD
 [![GitHub release](https://img.shields.io/github/release/tootsuite/mastodon.svg)][releases]
 [![Build Status](https://img.shields.io/circleci/project/github/tootsuite/mastodon.svg)][circleci]
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/tootsuite/mastodon.svg)][code_climate]
@@ -93,3 +93,13 @@ This program is free software: you can redistribute it and/or modify it under th
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+=======
+>   Now with automated deploys!
+
+[![Build Status](https://travis-ci.org/glitch-soc/mastodon.svg?branch=master)](https://travis-ci.org/glitch-soc/mastodon)
+
+So here's the deal: we all work on this code, and then it runs on dev.glitch.social and anyone who uses that does so absolutely at their own risk. can you dig it?
+
+- You can view documentation for this project at [glitch-soc.github.io/docs/](https://glitch-soc.github.io/docs/).
+- And contributing guidelines are available [here](CONTRIBUTING.md) and [here](https://glitch-soc.github.io/docs/contributing/).
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62

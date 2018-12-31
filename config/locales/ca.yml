@@ -874,10 +874,6 @@ ca:
 
       <p>Originalment adaptat des del <a href="https://github.com/discourse/discourse">Discourse privacy policy</a>.</p>
     title: "%{instance} Condicions del servei i política de privadesa"
-  themes:
-    contrast: Alt contrast
-    default: Mastodon
-    mastodon-light: Mastodon (clar)
   time:
     formats:
       default: "%b %d, %Y, %H:%M"

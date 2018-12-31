@@ -1,4 +1,41 @@
+<<<<<<< HEAD
 Contributing
+=======
+#  Contributing to Mastodon Glitch Edition  #
+
+Thank you for your interest in contributing to the `glitch-soc` project!
+Here are some guidelines, and ways you can help.
+
+>   (This document is a bit of a work-in-progress, so please bear with us.
+>   If you don't see what you're looking for here, please don't hesitate to reach out!)
+
+##  Planning  ##
+
+Right now a lot of the planning for this project takes place in our development Discord, or through GitHub Issues and Projects.
+We're working on ways to improve the planning structure and better solicit feedback, and if you feel like you can help in this respect, feel free to give us a holler.
+
+##  Documentation  ##
+
+The documentation for this repository is available at [`glitch-soc/docs`](https://github.com/glitch-soc/docs) (online at [glitch-soc.github.io/docs/](https://glitch-soc.github.io/docs/)).
+Right now, we've mostly focused on the features that make this fork different from upstream in some manner.
+Adding screenshots, improving descriptions, and so forth are all ways to help contribute to the project even if you don't know any code.
+
+##  Frontend Development  ##
+
+Check out [the documentation here](https://glitch-soc.github.io/docs/contributing/frontend/) for more information.
+
+##  Backend Development  ##
+
+See the guidelines below.
+
+ - - -
+
+You should also try to follow the guidelines set out in the original `CONTRIBUTING.md` from `tootsuite/mastodon`, reproduced below.
+
+<blockquote>
+
+CONTRIBUTING
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 ============
 
 Thank you for considering contributing to Mastodon 🐘 
@@ -34,4 +71,11 @@ The smaller the set of changes in the pull request is, the quicker it can be rev
 
 ## Documentation
 
+<<<<<<< HEAD
 The [Mastodon documentation](https://docs.joinmastodon.org) is a statically generated site. You can [submit merge requests to mastodon/docs](https://source.joinmastodon.org/mastodon/docs).
+=======
+You can contribute to translating Mastodon via Weblate at [weblate.joinmastodon.org](https://weblate.joinmastodon.org/).
+[![Mastodon translation statistics by language](https://weblate.joinmastodon.org/widgets/mastodon/-/multi-auto.svg)](https://weblate.joinmastodon.org/)
+
+</blockquote>
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62

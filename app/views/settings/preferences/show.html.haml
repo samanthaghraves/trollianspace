@@ -36,15 +36,19 @@
 
   %hr#settings_web/
 
+<<<<<<< HEAD
   .fields-row
     .fields-group.fields-row__column.fields-row__column-6
       = f.input :setting_theme, collection: Themes.instance.names, label_method: lambda { |theme| I18n.t("themes.#{theme}", default: theme) }, wrapper: :with_label, include_blank: false, hint: false
     .fields-group.fields-row__column.fields-row__column-6
       = f.input :setting_display_media, collection: ['default', 'show_all', 'hide_all'], wrapper: :with_label, include_blank: false, label_method: lambda { |item| t("simple_form.hints.defaults.setting_display_media_#{item}") }, hint: false
 
+=======
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
   .fields-group
     = f.input :setting_unfollow_modal, as: :boolean, wrapper: :with_label
     = f.input :setting_boost_modal, as: :boolean, wrapper: :with_label
+    = f.input :setting_favourite_modal, as: :boolean, wrapper: :with_label
     = f.input :setting_delete_modal, as: :boolean, wrapper: :with_label
 
   .fields-group

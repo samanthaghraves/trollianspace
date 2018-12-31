@@ -147,6 +147,7 @@ export default class StatusContent extends React.PureComponent {
 
     const content = { __html: status.get('contentHtml') };
     const spoilerContent = { __html: status.get('spoilerHtml') };
+    const textColor = { color: '#a41e1e'  };
     const directionStyle = { direction: 'ltr' };
     const classNames = classnames('status__content', {
       'status__content--with-action': this.props.onClick && this.context.router,

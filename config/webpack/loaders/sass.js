@@ -17,6 +17,11 @@ module.exports = {
         sourceMap: true,
       },
     },
-    'sass-loader',
+    {
+      loader: 'sass-loader',
+      options: {
+        includePaths: ['app/javascript'],
+      },
+    },
   ],
 };

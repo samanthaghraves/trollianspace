@@ -1,0 +1,28 @@
+@import '../javascript/styles/application.scss';
+
+// Columns width
+div.column {
+  flex-grow: 1;
+}
+
+@font-face {
+  font-family: "TrollType";
+  src: url('../../fonts/trolltype.ttf') format('truetype');
+}
+
+* {
+  font-family: "TrollType";
+}
+
+body {
+  font-family: "TrollType";
+  color: red;
+}
+
+div {
+  font-family: "TrollType";
+}
+
+button {
+  font-family: "TrollType";
+}

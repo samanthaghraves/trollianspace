@@ -26,6 +26,7 @@ class StatusesController < ApplicationController
   def show
     respond_to do |format|
       format.html do
+        use_pack 'public'
         @body_classes = 'with-modals'
 
         set_ancestors
@@ -53,6 +54,7 @@ class StatusesController < ApplicationController
   end
 
   def embed
+    use_pack 'embed'
     raise ActiveRecord::RecordNotFound if @status.hidden?
 
     skip_session!

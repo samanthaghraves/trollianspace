@@ -1,11 +1,15 @@
 # frozen_string_literal: true
 
+<<<<<<< HEAD
 class Settings::PreferencesController < ApplicationController
   layout 'admin'
 
   before_action :authenticate_user!
   before_action :set_body_classes
 
+=======
+class Settings::PreferencesController < Settings::BaseController
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
   def show; end
 
   def update
@@ -39,6 +43,7 @@ class Settings::PreferencesController < ApplicationController
       :setting_default_language,
       :setting_unfollow_modal,
       :setting_boost_modal,
+      :setting_favourite_modal,
       :setting_delete_modal,
       :setting_auto_play_gif,
       :setting_display_media,
@@ -46,7 +51,6 @@ class Settings::PreferencesController < ApplicationController
       :setting_reduce_motion,
       :setting_system_font_ui,
       :setting_noindex,
-      :setting_theme,
       :setting_hide_network,
       notification_emails: %i(follow follow_request reblog favourite mention digest report),
       interactions: %i(must_be_follower must_be_following)

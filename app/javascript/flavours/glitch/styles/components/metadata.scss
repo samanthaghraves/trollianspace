@@ -1,0 +1,53 @@
+.account__header .account__header__fields {
+  font-size: 15px;
+  line-height: 20px;
+  overflow: hidden;
+  margin: 20px -10px -20px;
+  border-bottom: 0;
+
+  a {
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  dl {
+    border-top: 1px solid lighten($ui-base-color, 8%);
+    display: flex;
+  }
+
+  dt,
+  dd {
+    box-sizing: border-box;
+    padding: 14px 20px;
+    text-align: center;
+    max-height: 48px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  dt {
+    color: $darker-text-color;
+    background: lighten($ui-base-color, 13%);
+    width: 120px;
+    flex: 0 0 auto;
+    font-weight: 500;
+
+    a {
+      color: $primary-text-color;
+    }
+  }
+
+  dd {
+    flex: 1 1 auto;
+    color: $primary-text-color;
+    background: $ui-base-color;
+
+    a {
+      color: $highlight-text-color;
+    }
+  }
+}

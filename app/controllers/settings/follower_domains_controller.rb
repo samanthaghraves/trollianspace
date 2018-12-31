@@ -1,11 +1,16 @@
 # frozen_string_literal: true
 
+<<<<<<< HEAD
 class Settings::FollowerDomainsController < ApplicationController
   layout 'admin'
 
   before_action :authenticate_user!
   before_action :set_body_classes
+=======
+require 'sidekiq-bulk'
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 
+class Settings::FollowerDomainsController < Settings::BaseController
   def show
     @account = current_account
     @domains = current_account.followers.reorder(Arel.sql('MIN(follows.id) DESC')).group('accounts.domain').select('accounts.domain, count(accounts.id) as accounts_from_domain').page(params[:page]).per(10)

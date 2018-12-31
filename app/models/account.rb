@@ -47,7 +47,11 @@
 #  fields                  :jsonb
 #  actor_type              :string
 #  quirk		   :text
+<<<<<<< HEAD
 #  regex                   :text
+=======
+#  regex		   :text
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 #
 
 class Account < ApplicationRecord
@@ -60,6 +64,8 @@ class Account < ApplicationRecord
   include AccountInteractions
   include Attachmentable
   include Paginable
+
+  MAX_NOTE_LENGTH = 500
 
   enum protocol: [:ostatus, :activitypub]
 
@@ -77,14 +83,19 @@ class Account < ApplicationRecord
   validates_with UniqueUsernameValidator, if: -> { local? && will_save_change_to_username? }
   validates_with UnreservedUsernameValidator, if: -> { local? && will_save_change_to_username? }
   validates :display_name, length: { maximum: 30 }, if: -> { local? && will_save_change_to_display_name? }
+<<<<<<< HEAD
   validates :note, length: { maximum: 413 }, if: -> { local? && will_save_change_to_note? }
   validate :note_has_fifteen_newlines?, if: -> { local? && will_save_change_to_note? }
+=======
+  validate :note_length_does_not_exceed_length_limit, if: -> { local? && will_save_change_to_note? }
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
   validates :fields, length: { maximum: 4 }, if: -> { local? && will_save_change_to_fields? }
 
   # Timelines
   has_many :stream_entries, inverse_of: :account, dependent: :destroy
   has_many :statuses, inverse_of: :account, dependent: :destroy
   has_many :favourites, inverse_of: :account, dependent: :destroy
+  has_many :bookmarks, inverse_of: :account, dependent: :destroy
   has_many :mentions, inverse_of: :account, dependent: :destroy
   has_many :notifications, inverse_of: :account, dependent: :destroy
 
@@ -469,6 +480,22 @@ class Account < ApplicationRecord
     keypair = OpenSSL::PKey::RSA.new(2048)
     self.private_key = keypair.to_pem
     self.public_key  = keypair.public_key.to_pem
+  end
+
+  YAML_START = "---\r\n"
+  YAML_END = "\r\n...\r\n"
+
+  def note_length_does_not_exceed_length_limit
+    note_without_metadata = note
+    if note.start_with? YAML_START
+      idx = note.index YAML_END
+      unless idx.nil?
+        note_without_metadata = note[(idx + YAML_END.length) .. -1]
+      end
+    end
+    if note_without_metadata.mb_chars.grapheme_length > MAX_NOTE_LENGTH
+      errors.add(:note, "can't be longer than 500 graphemes")
+    end
   end
 
   def normalize_domain

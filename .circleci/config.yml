@@ -121,7 +121,10 @@ jobs:
     steps:
       - *attach_workspace
       - *install_system_dependencies
-      - run: ./bin/rails assets:precompile
+      - run:
+          name: Precompile assets
+          command: ./bin/rails assets:precompile
+          no_output_timeout: 40m
       - persist_to_workspace:
           root: ~/projects/
           paths:

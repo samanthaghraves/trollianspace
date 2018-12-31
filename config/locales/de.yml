@@ -877,7 +877,6 @@ de:
       <p>Ursprünglich übernommen von der <a href="https://github.com/discourse/discourse">Discourse-Datenschutzerklärung</a>.</p>
     title: "%{instance} Nutzungsbedingungen und Datenschutzerklärung"
   themes:
-    contrast: Hoher Kontrast
     default: Mastodon
     mastodon-light: Mastodon (hell)
   time:

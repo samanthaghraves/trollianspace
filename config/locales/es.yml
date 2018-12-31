@@ -793,10 +793,13 @@ es:
     sensitive_content: Contenido sensible
   terms:
     title: Términos del Servicio y Políticas de Privacidad de %{instance}
+<<<<<<< HEAD
   themes:
     contrast: Alto contraste
     default: Mastodon
     mastodon-light: Mastodon (claro)
+=======
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
   time:
     formats:
       default: "%d de %b del %Y, %H:%M"

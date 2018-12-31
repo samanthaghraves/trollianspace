@@ -10,6 +10,7 @@ class AccountsController < ApplicationController
   def show
     respond_to do |format|
       format.html do
+        use_pack 'public'
         @body_classes      = 'with-modals'
         @pinned_statuses   = []
         @endorsed_accounts = @account.endorsed_accounts.to_a.sample(4)
@@ -63,7 +64,7 @@ class AccountsController < ApplicationController
   end
 
   def default_statuses
-    @account.statuses.where(visibility: [:public, :unlisted])
+    @account.statuses.not_local_only.where(visibility: [:public, :unlisted])
   end
 
   def only_media_scope

@@ -8,6 +8,7 @@ class AuthorizeInteractionsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_body_classes
   before_action :set_resource
+  before_action :set_pack
 
   def show
     if @resource.is_a?(Account)
@@ -62,5 +63,9 @@ class AuthorizeInteractionsController < ApplicationController
 
   def set_body_classes
     @body_classes = 'modal-layout'
+  end
+
+  def set_pack
+    use_pack 'modal'
   end
 end

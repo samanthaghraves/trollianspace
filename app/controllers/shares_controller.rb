@@ -4,6 +4,7 @@ class SharesController < ApplicationController
   layout 'modal'
 
   before_action :authenticate_user!
+  before_action :set_pack
   before_action :set_body_classes
 
   def show
@@ -24,6 +25,10 @@ class SharesController < ApplicationController
       admin: Account.find_local(Setting.site_contact_username),
       text: text,
     }
+  end
+
+  def set_pack
+    use_pack 'share'
   end
 
   def set_body_classes

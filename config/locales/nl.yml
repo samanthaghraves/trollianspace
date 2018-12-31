@@ -873,11 +873,15 @@ nl:
       <p>This document is CC-BY-SA. It was last updated March 7, 2018.</p>
 
       <p>Originally adapted from the <a href="https://github.com/discourse/discourse">Discourse privacy policy</a>.</p>
+<<<<<<< HEAD
     title: Gebruiksvoorwaarden en privacybeleid van %{instance}
   themes:
     contrast: Hoog contrast
     default: Mastodon
     mastodon-light: Mastodon (licht)
+=======
+    title: "%{instance} Terms of Service and Privacy Policy"
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
   time:
     formats:
       default: "%d %B %Y om %H:%M"

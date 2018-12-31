@@ -24,8 +24,12 @@ en:
         setting_display_media_show_all: Always show media marked as sensitive
         setting_hide_network: Who you follow and who follows you will not be shown on your profile
         setting_noindex: Affects your public profile and status pages
+<<<<<<< HEAD
         setting_theme: Affects how Mastodon looks when you're logged in from any device.
         username: Your username will be unique on %{domain}
+=======
+        setting_skin: Reskins the selected Mastodon flavour
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
         whole_word: When the keyword or phrase is alphanumeric only, it will only be applied if it matches the whole word
       imports:
         data: CSV file exported from another Mastodon instance
@@ -69,16 +73,21 @@ en:
         setting_default_privacy: Post privacy
         setting_default_sensitive: Always mark media as sensitive
         setting_delete_modal: Show confirmation dialog before deleting a toot
+<<<<<<< HEAD
         setting_display_media: Media display
         setting_display_media_default: Default
         setting_display_media_hide_all: Hide all
         setting_display_media_show_all: Show all
         setting_expand_spoilers: Always expand toots marked with content warnings
+=======
+        setting_display_sensitive_media: Always show media marked as sensitive
+        setting_favourite_modal: Show confirmation dialog before favouriting (applies to Glitch flavour only)
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
         setting_hide_network: Hide your network
         setting_noindex: Opt-out of search engine indexing
         setting_reduce_motion: Reduce motion in animations
+        setting_skin: Skin
         setting_system_font_ui: Use system's default font
-        setting_theme: Site theme
         setting_unfollow_modal: Show confirmation dialog before unfollowing someone
         severity: Severity
         type: Import type

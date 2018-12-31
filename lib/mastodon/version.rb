@@ -33,7 +33,7 @@ module Mastodon
     end
 
     def repository
-      'tootsuite/mastodon'
+      'glitch-soc/mastodon'
     end
 
     def source_base_url

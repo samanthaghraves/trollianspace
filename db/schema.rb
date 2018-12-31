@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_12_6_034038) do
+=======
+ActiveRecord::Schema.define(version: 2018_08_24_042627) do
+>>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -139,6 +143,16 @@ ActiveRecord::Schema.define(version: 2018_12_6_034038) do
     t.string "uri"
     t.index ["account_id", "target_account_id"], name: "index_blocks_on_account_id_and_target_account_id", unique: true
     t.index ["target_account_id"], name: "index_blocks_on_target_account_id"
+  end
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.bigint "account_id", null: false
+    t.bigint "status_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id", "status_id"], name: "index_bookmarks_on_account_id_and_status_id", unique: true
+    t.index ["account_id"], name: "index_bookmarks_on_account_id"
+    t.index ["status_id"], name: "index_bookmarks_on_status_id"
   end
 
   create_table "conversation_mutes", force: :cascade do |t|
@@ -313,9 +327,9 @@ ActiveRecord::Schema.define(version: 2018_12_6_034038) do
   create_table "mutes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "hide_notifications", default: true, null: false
     t.bigint "account_id", null: false
     t.bigint "target_account_id", null: false
-    t.boolean "hide_notifications", default: true, null: false
     t.index ["account_id", "target_account_id"], name: "index_mutes_on_account_id_and_target_account_id", unique: true
     t.index ["target_account_id"], name: "index_mutes_on_target_account_id"
   end
@@ -518,6 +532,7 @@ ActiveRecord::Schema.define(version: 2018_12_6_034038) do
     t.bigint "account_id", null: false
     t.bigint "application_id"
     t.bigint "in_reply_to_account_id"
+    t.boolean "local_only"
     t.index ["account_id", "id", "visibility", "updated_at"], name: "index_statuses_20180106", order: { id: :desc }
     t.index ["in_reply_to_account_id"], name: "index_statuses_on_in_reply_to_account_id"
     t.index ["in_reply_to_id"], name: "index_statuses_on_in_reply_to_id"
@@ -636,6 +651,8 @@ ActiveRecord::Schema.define(version: 2018_12_6_034038) do
   add_foreign_key "backups", "users", on_delete: :nullify
   add_foreign_key "blocks", "accounts", column: "target_account_id", name: "fk_9571bfabc1", on_delete: :cascade
   add_foreign_key "blocks", "accounts", name: "fk_4269e03e65", on_delete: :cascade
+  add_foreign_key "bookmarks", "accounts", on_delete: :cascade
+  add_foreign_key "bookmarks", "statuses", on_delete: :cascade
   add_foreign_key "conversation_mutes", "accounts", name: "fk_225b4212bb", on_delete: :cascade
   add_foreign_key "conversation_mutes", "conversations", on_delete: :cascade
   add_foreign_key "custom_filters", "accounts", on_delete: :cascade
