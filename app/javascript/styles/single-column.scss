@@ -1,0 +1,68 @@
+// Colors
+$ui-base-color: #4d0303;
+$ui-base-lighter-color: #d6bdbd;
+$ui-primary-color: #FAE6E6;
+$ui-secondary-color: #ffd3d3;
+$ui-highlight-color: #BD8888;
+
+/* One Column */
+@media (min-width: 1024px)
+  {
+    .tabs-bar {display: flex;
+    width: 635px;
+    margin-left: calc(25% + 155px);
+    z-index: 1;
+  }
+
+  .tabs-bar > a:first-child
+  {
+    display: none;
+  }
+
+  .columns-area
+  {
+    width: calc(50% + 300px);
+    margin: -60px auto auto;
+  }
+
+  .column
+  {
+    display: none;
+  }
+
+  .column:last-child
+  {
+    display: flex;
+    min-width: 600px;
+    margin-top: 55px;
+  }
+}
+
+// Fonts
+@font-face {
+  font-family: 'witchesAwesome';
+  src:  url('/witchesAwesome/witchesAwesome.eot?c15');
+  src:  url('/witchesAwesome/witchesAwesome.eot?c15#iefix') format('embedded-opentype'),
+    url('/witchesAwesome/witchesAwesome.ttf?c15') format('truetype'),
+    url('/witchesAwesome/witchesAwesome.woff?c15') format('woff'),
+    url('/witchesAwesome/witchesAwesome.svg?c15#witchesAwesome') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  font-family: witchesAwesome, FontAwesome;
+}
+
+.detailed-status__link .fa-star {
+  font-size: 11px;
+}
+
+.detailed-status__link .fa-retweet {
+  font-size: 12px;
+}
+
+// Import defaults
+@import 'application';
+
+

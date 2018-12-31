@@ -1,0 +1,772 @@
+<!doctype html
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+<title>Uploadfiles.io - NewAlternianVers3-Regular.ttf</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Uploadfiles.io is a completely free file sharing service, upload files without limits, securely & anonymously. The simplest way to send large files, instantly. No signup required, just drag, drop & share." />
+<meta name="keywords" content="upload files, file hosting, file sharing, send files" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@uploadfilesfree" />
+<meta name="twitter:title" content="Uploadfiles.io @UploadFilesFree" />
+<meta name="twitter:description" content="NewAlternianVers3-Regular.ttf @UploadFilesFree" />
+<meta name="twitter:image" content="https://uploadfiles.io/assets/img/welcome/1.gif" />
+
+<meta property="og:title" content="Uploadfiles.io - NewAlternianVers3-Regular.ttf" />
+<meta property="og:image" content="https://uploadfiles.io/assets/img/welcome/1.gif" />
+<meta property="og:description" content="Upload files, for free, securely, anonymously, without limits. @UploadFilesFree" />
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/icons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/icons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/icons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/icons/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/assets/icons/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/iassets/assets/cons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/icons/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/icons/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="/assets/icons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/assets/icons/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="/assets/icons/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="/assets/icons/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="/assets/icons/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="/assets/icons/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="/assets/icons/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="/assets/icons/mstile-310x310.png" />
+<link rel="canonical" href="https://uploadfiles.io/ozmaj">
+
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,400,300italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+
+<link rel="stylesheet" href="/assets/css/styles.css?149425251" />
+<link rel="stylesheet" href="/assets/css/dropzone.css" />
+<link rel="stylesheet" href="../assets/css/tooltips.css" />
+
+<link rel="stylesheet" href="/assets/css/purple.css">
+
+<link rel="stylesheet" href="/assets/css/responsive.css">
+
+<link href="/assets/css/jquery.growl.css" rel="stylesheet" type="text/css" />
+
+
+<input id="max_size" type="hidden" value="5000" />
+
+<input id="max_files" type="hidden" value="10" />
+
+<input id="upload_url" type="hidden" value="https://up.uploadfiles.io/upload" />
+
+<input id="download_url" type="hidden" value="https://down.uploadfiles.io/get/" />
+
+<input id="stripe_public_key" type="hidden" value="pk_live_Db31aeXECBjPiiO3ABuda7EW" />
+
+<input id="csrf_token" type="hidden" value="csrf_test_name" />
+<input id="csrf_hash" type="hidden" value="8738d4801768d05bcbd6a372f55c8315" />
+
+<script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
+<script src="/assets/js/clipboard.min.js"></script>
+<script src="/assets/js/tooltips.js"></script>
+<script src="/assets/js/jquery.growl.js"></script>
+<script src="/assets/js/dropzone.js"></script>
+<script>Dropzone.autoDiscover = false;</script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/wow.min.js"></script>
+<script src="/assets/js/custom.js?149425251" /></script>
+<script src="/assets/js/countup.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56b61b1b0db9758f"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73416834-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5877609709988775",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+<body class="download">
+
+
+
+
+
+<div class="alert alert-success" role="alert">
+<p><a href="/app" onclick="ga('send', 'event', 'Interaction', 'Try our app clicked');"><i class="fa fa-bullhorn" aria-hidden="true"></i> Be the first to try our new desktop app and get 2GB of permanent storage for free!</a></p>
+</div>
+
+<div class="navbar bs-docs-nav">
+<div class="container">
+
+<div class="navbar-collapse">
+<div class="nav-mobile-toggle">
+<i class="icon-Align-Right fa fa-list-ul "></i>
+</div>
+<ul class="nav navbar-nav navbar-right main-navigation">
+<li class=""><a href="/">Home</a></li>
+<li class=""><a href="/app">Desktop App</a></li>
+<li class=""><a href="/file-upload-widget">File upload Widget</a></li>
+<li class=""><a href="/sell">Sell Files</a></li>
+<li><a href="https://help.uploadfiles.io/" target="_blank">Help</a></li>
+<li><a href="/affiliates">Affiliates</a></li>
+<li><a href="/login">Login</a></li>
+<li><a href="/#packages">Register</a></li>
+</ul>
+</div>
+</div> 
+</div> 
+<div class="wrapper header solid-color">
+
+<div class="color-overlay">
+
+<div class="container">
+
+<div class="only-logo">
+<div class="navbar-header">
+<a href="/">
+<img src="/assets/img/logo.png" alt="" width="125">
+</a>
+</div>
+</div> 
+<div class="row">
+<div class="col-md-12 col-sm-12">
+
+<div class="intro-section">
+<div class="row sponsor">
+<div class="col-md-12 col-sm-12 features-left">
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5877609709988775" data-ad-slot="7747656843" data-ad-format="auto"></ins>
+<script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+</div>
+</div>
+<div class="ad-blocked">
+<h3>
+<img width="20px" src="/assets/img/adblock.png" />
+Adblocker Detected
+<img width="20px" src="/assets/img/adblock.png" />
+</h3>
+<p>Please consider whitelisting us. Our service relies on ads, we promise you'll never find popups/intrusive ads here.</p>
+</div>
+
+<div id="file">
+<a class="free-download btn btn-default btn-lg standard-button" rel="nofollow">
+<i class="fa fa-spinner slow-spin"></i>Slow Download (Free) <span class="timer"></span>
+</a>
+<a class="pro-download btn btn-default btn-lg standard-button" target="_blank">
+<i class="fa fa-spinner fast-spin"></i>Turbo Download ($5/month)
+</a>
+<div class="details">
+<h3>NewAlternianVers3-Regular.ttf</h3>
+
+<p>
+Expires in: 4 Weeks
+&nbsp; | &nbsp;
+Size: 12.1 KB
+<span class="divide">&nbsp; | &nbsp;</span>
+
+<a class="report-file" href="javascript:void(0);" data-toggle="modal" data-target="#reportModal">
+<i class="fa fa-warning"></i> Report file for violation
+</a>
+</p>
+
+</div>
+<div id="share-file">
+<a href="javascript:void(0);" title="Copy URL" class='standard-button copy' data-clipboard-text='https://uploadfiles.io/ozmaj'>
+<i class="fa fa-clipboard"></i> Copy File URL
+</a>
+<a class="standard-button addthis_button_email email">Share by Email</a>
+<a class="standard-button addthis_button_facebook facebook">Share on Facebook</a>
+<a class="standard-button addthis_button_twitter twitter">Share on Twitter</a>
+<a class="standard-button addthis_button_linkedin linkedin">Share on LinkedIn</a>
+</div>
+</div>
+</div>
+
+</div>
+<div class="row sponsor">
+<div class="col-md-12 col-sm-12 features-left sponsor square">
+
+<ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-5877609709988775" data-ad-slot="9224390047" data-ad-format="auto"></ins>
+<script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+</div>
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<input type="hidden" id="slug" value="ozmaj">
+
+<footer>
+<div class="container">
+<div class="contact-box wow animated" data-wow-offset="10" data-wow-duration="1.5s">
+<div class="btn contact-button expand-form expanded">
+<a href="/"><img width="50" src="/assets/img/logo-black.png" alt="Uploadfiles.io" class="responsive-img"></a>
+</div>
+</div>
+
+<p class="copyright">
+©2018 Uploadfiles.io, All Rights Reserved. | <a href="/terms">Terms</a> | <a href="/about">About</a> | <a href="/privacy">Privacy</a> | <a href="/dmca">DMCA</a> | <a href="/contact">Contact</a> | <a href="/advertise">Advertise</a> | <a target="_blank" href="http://status.uploadfiles.io/">Status</a>
+</p>
+</div>
+
+</footer>
+
+
+<div class="modal fade upsell-modal" id="promoModal" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-md" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<h4 class="modal-title" id="myModalLabel"><i class="fa fa-gift"></i> Before you go...</h4>
+</div>
+<div class="modal-body">
+<p>Subscribe to a plan today and get</p>
+<h3>25% Off For a Year!</h3>
+<br> <br>
+<a href="/register?coupon=25off" onclick="ga('send', 'event', 'Interaction', '25% off button clicked');" class="standard-button">Redeem Offer</a>
+<br> <br>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade email-modal" id="emailModal" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-md" role="document">
+<div class="modal-content">
+<form id="email-form">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<h4 class="modal-title" id="myModalLabel"><i class="fa fa-envelope"></i> Send by email</h4>
+</div>
+<div class="modal-body">
+<p>You can send this file to up to 5 friends by email</p>
+<div class="row">
+<input id="recipient-email" name="recipients" class='' type='text' placeholder="Email to (comma seperated)" required />
+</div>
+<div class="row">
+<input id="your-email" name="sender" class='' type='email' placeholder="Your email" required />
+</div>
+<div class="row">
+<textarea id="email-message" name="message" class='' type='email' placeholder="Message (optional)"></textarea>
+</div>
+
+<div class="row">
+</div>
+</div>
+<div class="modal-footer">
+<button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+<button type="submit" class="btn btn-primary submit">Send now</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+<script>
+  dataLayer = [];
+</script>
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WDVR8F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WDVR8F');</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['ProfitWellObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m);
+  })(window,document,'script','https://dna8twue3dlxq.cloudfront.net/js/profitwell.js','profitwell');
+  profitwell('auth_token', 'ed6c9aea7c68fd753d5e1332377b9836');
+  profitwell('user_email', "");
+
+</script>
+<script src="/adsbygoogle.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+  if(!document.getElementById('gmtIhVXwjQxU')){
+    $('.ad-blocked').show();
+  }
+
+
+  if(document.getElementById('gmtIhVXwjQxU')){
+    gmtIhVXwjQxU='No';
+  } else {
+    gmtIhVXwjQxU='Yes';
+  }
+
+  // Send GA event for ad blocking
+  if(typeof ga !=='undefined'){
+    ga('send','event','Blocking Ads',gmtIhVXwjQxU,{'nonInteraction':1});
+  } else if(typeof _gaq !=='undefined'){
+    _gaq.push(['_trackEvent','Blocking Ads',gmtIhVXwjQxU,undefined,undefined,true]);
+  }
+
+
+</script>
+
+
+<div class="external-holder">
+
+<ins class="adsbygoogle adslot_1" style="display:inline-block" data-ad-client="ca-pub-5877609709988775" data-ad-slot="5598210809">
+</ins>
+<script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+<img class="crossmark external-close" src="/assets/img/cross.svg">
+</div>
+
+</body>
+</html>
+
+<div class="modal fade report-modal" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="myReportModalLabel">
+<div class="modal-dialog modal-sm" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<h4 class="modal-title" id="myModalLabel"><i class="fa fa-warning"></i> Report File</h4>
+</div>
+<div class="modal-body align-left">
+<form id="Report-file">
+<input class="report-reason" type="radio" name="copyright" value="copyright"> Privacy, copyright or legal complaints<br>
+<input class="report-reason" type="radio" name="spam" value="spam"> Spam or misleading<br>
+<input class="report-reason" type="radio" name="malware" value="malware"> Malware, virus or malicious content<br>
+<input class="report-reason" type="radio" name="child" value="child"> Child abuse <br>
+<input class="report-reason" type="radio" name="other" value="other"> Other <br>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade donate-modal" id="downloadStartedModal" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-md" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<h4 class="modal-title" id="myModalLabel"><i class="fa fa-cloud-download"></i> Your Download Has Started</h4>
+</div>
+<div class="modal-body">
+<h3>Your file should begin downloading now.</h3>
+<p><b><i class="fa fa-helo"></i> Not downloading? Click <a href="javascript:void(0)" onclick="ga('send', 'event', 'Interaction', 'Download not started clicked');" class="download-button">here</a> to try again.</b></p>
+<br>
+<h4>Want your own account with Uploadfiles?</h4>
+<a target="_blank" href="/register" class="btn btn-default btn-lg standard-button"><i class="fa fa-user" aria-hidden="true"></i> Signup Now</a>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="modal fade upsell-modal" id="upsellModal" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<h4 class="modal-title" id="myModalLabel"><i class="fa fa-cloud-download"></i> Ready to go pro?</h4>
+</div>
+<div class="modal-body">
+<p>Want to unlock unlimited download speeds and store your own files with us? </p>
+<p><b>Signup for a pro account today for just $5/month.</b></p>
+<a class="standard-button">Free Download (350kb/s)</a>
+<a class="standard-button">Pro Download (Unlimited)</a>
+<br> <br>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-primary" data-dismiss="modal">Not this time</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="modal fade join-modal" id="joinModal" tabindex="-1" role="dialog" aria-labelledby="myDonateModalLabel">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+<h4 class="modal-title">
+Ready to go Pro?
+</h4>
+</div>
+<div class="modal-body">
+
+<div class="interval-selector">
+<div class="mute">Monthly</div>
+<label class="switch">
+<input type="checkbox">
+<div class="slider round"></div>
+</label>
+<div class="mute">Yearly</div>
+<span class="promo">1 month free!</span>
+<div class="clearfix"></div>
+</div>
+
+<div class="pricing pricing-5">
+<div class="col-sm-3 text-center hidden-sm hidden-xs">
+<div class="pricing__title">
+</div>
+<ul>
+<li>
+<span>Storage Space</span>
+</li>
+<li>
+<span aria-label="Download speeds for free users are limited to 350KB/s, pro users can download without speed limits, and business users can enjoy unlimited speeds for themselves and others who download their files" class="tooltipped">
+<img src="/assets/img/question.svg" />
+</span>
+<span>Download Speed</span>
+</li>
+<li>
+<span>Max File Size</span>
+</li>
+<li>
+<span aria-label="Drag & Drop up to 99 files at once into your dashboard" class="tooltipped">
+<img src="/assets/img/question.svg" />
+</span>
+<span>Simultaneous Uploads</span>
+</li>
+<li>
+<span aria-label="We never limit bandwidth, no matter how popular your files are" class="tooltipped">
+<img src="/assets/img/question.svg" />
+</span>
+<span>Unlimited Bandwidth</span>
+</li>
+<li>
+<span aria-label="All data is sent securely over HTTPS, with end to end encryption. From browser, to load balancers, to storage servers" class="tooltipped">
+<img src="/assets/img/question.svg" />
+</span>
+<span>End to End Encryption</span>
+</li>
+<li>
+<span aria-label="Uploadfiles is powered by adverts for free users, our ads are always non obtrusive, Google Adsense banners" class="tooltipped">
+<img src="/assets/img/question.svg" />
+</span>
+<span>No Adverts</span>
+</li>
+<li>
+<span aria-label="Secure your uploads by adding a password, meaning users will only be able to download them if they have both the file URL and the password" class="tooltipped">
+<img src="/assets/img/question.svg" />
+</span>
+<span>Password Protected Files</span>
+</li>
+<li>
+<span aria-label="Create folders inside your dashboard, add files and share them all at once with a single folder URL" class="tooltipped">
+<img src="/assets/img/question.svg" />
+</span>
+<span>Share folders by URL</span>
+</li>
+<li>
+<span aria-label="Retrieve files that have previously expired (files remain available for paid users for up to 7 days of no activity after file has expired)" class="tooltipped">
+<img src="/assets/img/question.svg" />
+</span>
+<span>Access expired files</span>
+</li>
+<li>
+<span aria-label="Customise your file download pages with your own logo, background image, colours, text, domain name and custom CSS" class="tooltipped">
+<img src="/assets/img/question.svg" />
+</span>
+<span>Custom Brand &amp; Domain</span>
+</li>
+<li>
+<span aria-label="Add our whitelabel upload widget to any website, just copy & paste our code snippet and allow your users to upload files directly to your Uploadfiles storage via your own website" class="tooltipped">
+<img src="/assets/img/question.svg" />
+</span>
+<span>Embeddable Upload Widget <label>beta</label></span>
+</li>
+<li>
+<span aria-label="Generate file links that automatically expire after they've been downloaded" class="tooltipped">
+<img src="/assets/img/question.svg" />
+</span>
+<span>One Time Download Links <label>beta</label></span>
+</li>
+<li>
+<span aria-label="Allow your files to be downloaded by others directly, bypassing our download pages (max. 1,000 downloads per day, add ons available at $5/month for 1,000 extra daily direct downloads)" class="tooltipped">
+<img src="/assets/img/question.svg" />
+</span>
+<span>Direct Download Access <label>beta</label></span>
+</li>
+<li>
+<span aria-label="Use our REST API to srecurely upload and download files directly from your CL or within your application" class="tooltipped">
+<img src="/assets/img/question.svg" />
+</span>
+<span>API Access <label>beta</label></span>
+</li>
+</ul>
+</div>
+<div class="col-md-3 col-sm-4 text-center">
+<div class="pricing__title">
+<h6>Free</h6>
+<div class="price">
+<h2>
+<span class="sign">$</span>
+<span class="amount switch-data">0</span>
+<span class="amount switch-data hide">0</span>
+<span class="month switch-data"> /mo</span>
+<span class="month switch-data hide"> /yr</span>
+</h2>
+</div>
+</div>
+<ul>
+<li>
+<span class="hidden-lg hidden-md">Storage Space</span>
+<span class="text">2GB</span>
+</li>
+<li>
+<span class="hidden-lg hidden-md">Download Speed</span>
+<span class="text">350KB/s</span>
+</li>
+<li>
+<span class="hidden-lg hidden-md">Max File Size</span>
+<span class="text">5GB</span>
+</li>
+<li>
+<span class="hidden-lg hidden-md">Simultaneous Uploads</span>
+<span class="text">10</span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">Unlimited Bandwidth</span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">End to End Encryption</span>
+</li>
+<li>
+<img class=crossmark src="/assets/img/cross.svg">
+<span class="hidden-lg hidden-md">No Adverts</span>
+</li>
+<li>
+<img class=crossmark src="/assets/img/cross.svg">
+<span class="hidden-lg hidden-md">Password Protected Files</span>
+</li>
+<li>
+<img class=crossmark src="/assets/img/cross.svg">
+<span class="hidden-lg hidden-md">Share folders by URL</span>
+</li>
+<li>
+<img class=crossmark src="/assets/img/cross.svg">
+<span class="hidden-lg hidden-md">Access expired files</span>
+</li>
+<li>
+<img class=crossmark src="/assets/img/cross.svg">
+<span class="hidden-lg hidden-md"><a href="/branded" target="_blank">Custom Brand &amp; Domain <i class="fa fa-external-link"></i></a></span>
+</li>
+<li>
+<img class=crossmark src="/assets/img/cross.svg">
+<span class="hidden-lg hidden-md">Embeddable Upload Widget <label>beta</label></span>
+</li>
+<li>
+<img class=crossmark src="/assets/img/cross.svg">
+<span class="hidden-lg hidden-md">One Time Download Links <label>beta</label></span>
+</li>
+<li>
+<img class=crossmark src="/assets/img/cross.svg">
+<span class="hidden-lg hidden-md">Direct Download Access <label>beta</label></span>
+</li>
+<li>
+<img class=crossmark src="/assets/img/cross.svg">
+<span class="hidden-lg hidden-md">API Access (Put & Get files) <label>beta</label></span>
+</li>
+<li>
+<a href="/register?pid=1" class="btn btn-default btn-lg standard-button"> Signup</a>
+</li>
+</ul>
+</div>
+<div class="col-md-3 col-sm-4 text-center pricing--emphasise">
+<div class="pricing__title">
+<div class="most-popular">
+<img src="/assets/img/banner.png" alt="" width="125">
+</div>
+<h6>Pro</h6>
+<div class="price">
+<h2>
+<span class="sign">$</span>
+<span class="amount switch-data">5</span>
+<span class="amount switch-data hide">55</span>
+<span class="month switch-data"> /mo</span>
+<span class="month switch-data hide"> /yr</span>
+</h2>
+</div>
+</div>
+<ul>
+<li>
+<span class="hidden-lg hidden-md">Storage Space</span>
+<span class="text"><b>100GB</b></span>
+</li>
+<li>
+<span class="hidden-lg hidden-md">Download Speed</span>
+<span class="text"><b>Unlimited for you</b></span>
+</li>
+<li>
+<span class="hidden-lg hidden-md">Max File Size</span>
+<span class="text">10GB</span>
+</li>
+<li>
+<span class="hidden-lg hidden-md">Simultaneous Uploads</span>
+<span class="text">30</span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">Unlimited Bandwidth</span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">End to End Encryption</span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">No Adverts</span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">Password Protected Files</span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">Share folders by URL</span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">Access expired files</span>
+</li>
+<li>
+<img class=crossmark src="/assets/img/cross.svg">
+<span class="hidden-lg hidden-md"><a href="/branded" target="_blank">Custom Brand &amp; Domain <i class="fa fa-external-link"></i></a></span>
+</li>
+<li>
+<img class=crossmark src="/assets/img/cross.svg">
+<span class="hidden-lg hidden-md">Embeddable Upload Widget <label>beta</label></span>
+</li>
+<li>
+<img class=crossmark src="/assets/img/cross.svg">
+<span class="hidden-lg hidden-md">One Time Download Links <label>beta</label></span>
+</li>
+<li>
+<img class=crossmark src="/assets/img/cross.svg">
+<span class="hidden-lg hidden-md">Direct Download Access <label>beta</label></span>
+</li>
+<li>
+<img class=crossmark src="/assets/img/cross.svg">
+ <span class="hidden-lg hidden-md">API Access (Put & Get files) <label>beta</label></span>
+</li>
+<li>
+<a href="/register?pid=11" class="btn btn-default btn-lg standard-button"> Signup</a>
+</ul>
+</div>
+<div class="col-md-3 col-sm-4 text-center">
+<div class="pricing__title">
+<h6>Business</h6>
+<div class="price">
+<h2>
+<span class="sign">$</span>
+<span class="amount switch-data">19</span>
+<span class="amount switch-data hide">209</span>
+<span class="month switch-data"> /mo</span>
+<span class="month switch-data hide"> /yr</span>
+</h2>
+</div>
+</div>
+<ul>
+<li>
+<span class="hidden-lg hidden-md">Storage Space</span>
+<span class="text"><b>1TB (1,000GB)</b></span>
+</li>
+<li>
+<span class="hidden-lg hidden-md">Download Speed</span>
+<span class="text"><b>Unlimited for everyone</b></span>
+</li>
+<li>
+<span class="hidden-lg hidden-md">Max File Size</span>
+<span class="text">100GB</span>
+</li>
+<li>
+<span class="hidden-lg hidden-md">Simultaneous Uploads</span>
+<span class="text">99</span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">Unlimited Bandwidth</span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">End to End Encryption</span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">No Adverts</span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">Password Protected Files</span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">Share folders by URL</span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">Access expired files</span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md"><a href="/branded" target="_blank">Custom Brand &amp; Domain <i class="fa fa-external-link"></i></a></span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">Embeddable Upload Widget <label>beta</label></span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">One Time Download Links <label>beta</label></span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">Direct Download Access <label>beta</label></span>
+</li>
+<li>
+<img src="/assets/img/tick.svg">
+<span class="hidden-lg hidden-md">API Access (Put & Get files) <label>beta</label></span>
+</li>
+<li>
+<a href="/register?pid=12" class="btn btn-default btn-lg standard-button"> Signup</a>
+</li>
+</ul>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

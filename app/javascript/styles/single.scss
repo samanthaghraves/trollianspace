@@ -1,0 +1,64 @@
+// Colors
+$ui-base-color: #4d0303;
+$ui-base-lighter-color: #d6bdbd;
+$ui-primary-color: #FAE6E6;
+$ui-secondary-color: #ffd3d3;
+$ui-highlight-color: #BD8888;
+
+
+@media (min-width: 324px) {
+    .tabs-bar {display: flex;
+    width: 785px;
+    margin-left: calc(15% + 155px); z-index: 1;
+    }
+    .columns-area {
+    width: calc(70% + 300px);
+    margin: -60px auto auto;
+    }
+    .column {
+    display: none;
+    }
+    .column:last-child {
+    display: flex;
+    min-width: 800px;
+    margin-top: 55px;
+    }
+}
+ 
+// Fonts
+@font-face {
+  font-family: "Courier New", Courier, monospace;
+}
+
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+
+div {
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+button {
+  font-family: "Courier New", Courier, monospace;
+}
+
+ 
+h1, h2, h3 {
+    font-size:70%
+}
+ 
+.account__display-name strong, .status__display-name strong {
+    font-size:13px;
+}
+ 
+.reply-indicator__content, .status__content {
+    font-size:14px;
+}
+
+// Import defaults
+@import 'application';
+

@@ -1,0 +1,46 @@
+$ui-base-color: #4d0303;
+$ui-base-lighter-color: #d6bdbd;
+$ui-primary-color: #FAE6E6;
+$ui-secondary-color: #ffd3d3;
+$ui-highlight-color: #BD8888;
+
+
+@import 'application.scss';
+ 
+// Columns width
+div.column {
+  flex-grow: 1;
+}
+
+// Font
+ @font-face {
+  font-family: "NewAlternian";
+  src: url('NewAlternianVers3-Regular.ttf') format('truetype');
+}
+ * {
+  font-family: "NewAlternian";
+}
+ body {
+  font-family: "NewAlternian";
+}
+ div {
+  font-family: "NewAlternian";
+}
+ button {
+  font-family: "NewAlternian";
+}
+.bbcode__b {
+    font-family: "NewAlternian";
+    font-weight: 900;
+  }
+.bbcode__i {
+    font-family: "NewAlternian";
+    font-style: italic;
+    -moz-font-feature-settings: 'ital';
+    -webkit-font-feature-settings: 'ital';
+    font-feature-settings: 'ital';
+  }
+
+
+
+

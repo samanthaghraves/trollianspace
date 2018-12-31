@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+    <title>1fichier.com: Cloud Storage</title>
+		<meta name="robots" content="noindex" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <link rel="shortcut icon" href="https://img.1fichier.com/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="https://img.1fichier.com/favicon.ico" />
+    <link rel="icon" type="image/png" href="https://img.1fichier.com/favicon.png" />
+    <link rel="apple-touch-icon" href="https://img.1fichier.com/favicon.png" />
+    <link rel="image_src" href="https://img.1fichier.com/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="https://img.1fichier.com/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://img.1fichier.com/css/jquery.ui.css" />
+    <script type="text/javascript" src="https://img.1fichier.com/js/jquery.js"></script>
+		
+		<script type="text/javascript">
+			<!--//<![CDATA[
+				jQuery(document).ready(function($) {
+					
+
+					
+				});
+			//]]>-->
+		</script>
+		
+			
+				
+					
+						<script type="text/javascript">window._taboola = window._taboola || []; _taboola.push({category:'auto'});!function (e, f, u) { e.async = 1; e.src = u; f.parentNode.insertBefore(e, f);}(document.createElement('script'), document.getElementsByTagName('script')[0], '//cdn.taboola.com/libtrc/1fichier-en/loader.js');</script>
+					
+				
+			
+					
+	</head>
+<body>
+<script type="text/javascript">
+	<!--
+		jQuery(document).ready(function($) {
+			if(getCookie('show_cm') != 'no') { $('#cookie_box').show(); }
+			$('.cookie_box_close').click(function() { $('#cookie_box').hide(); var expires = new Date(); expires.setTime(expires.getTime() + 15552000000); document.cookie = 'show_cm=no; expires=' + expires.toUTCString();	return false; });
+		});
+		function getCookie(cookie_name) {
+			if (document.cookie.length>0) {
+				cookie_start = document.cookie.indexOf(cookie_name + "=");
+				if (cookie_start != -1)	{	cookie_start = cookie_start + cookie_name.length+1;	cookie_end = document.cookie.indexOf(";",cookie_start);
+				if (cookie_end == -1)	{ cookie_end = document.cookie.length; }
+				return unescape(document.cookie.substring(cookie_start,cookie_end));
+			}}
+			return "";
+		}				
+	// -->
+</script>
+<div id="cookie_box">Our website need cookies to work.
+	<br/>Using our services, you accept usage of cookies.
+	<br/>For more informations :
+	<br/><br/><a href="https://1fichier.com/cgu.html">Legal Mentions, Terms of Services, Privacy Policy</a>
+	<br/><br/><a href="#" style="text-decoration-color: #fbc260" class="cookie_box_close">I fully accept usage of cookies and the Terms of Services</a>
+</div>
+
+<script type="text/javascript">
+	<!-- 
+		$( function() {
+	    $.widget( "custom.iconselectmenu", $.ui.selectmenu, {
+  	    _renderItem: function( ul, item ) {
+    	    var li = $("<li>"), wrapper = $("<div>", { text: item.label });
+					if( item.element.attr("data-imagesrc") )	{ $( "<span>", { style: "background-image: url( \"" + item.element.attr("data-imagesrc") + "\")", "class": "ui-icon avatar" }).appendTo( wrapper ); }
+					else { $( "<span>", { style: "background-image:none", "class": "ui-icon avatar" }).appendTo( wrapper ); }
+	        return li.append( wrapper ).appendTo( ul );
+      	},
+				_renderButtonItem: function( item ) {
+				  var buttonItem;
+					if( item.element.attr("data-imagesrc") ) { buttonItem = $( "<span>", { style: "background-image: url( \"" + item.element.attr("data-imagesrc") + "\")", "class": "ui-selectmenu-text avatar" }) }
+					else {  buttonItem = $( "<span>", { style: "background-image:none", "class": "ui-selectmenu-text avatar" }) }
+				  this._setText( buttonItem, item.label );
+				  return buttonItem;
+				}
+    	});
+
+			
+    	$(".lselector").iconselectmenu({ width:200, change: function( event, ui ) { window.location.href=this.value; }  }).iconselectmenu("menuWidget").addClass( "ui-menu-icons" );
+  	});
+	-->
+</script>
+
+<div id="header">
+	<a href="https://1fichier.com" title="1fichier.com"><img id="logo" src="https://img.1fichier.com/logo.png" alt="logo" width="240" height="70" /></a>
+
+	<div id="btn-container">
+ 		<select class="lselector">
+			<option value="/?c9r46vpt91blmif793kj&amp;lg=en" data-imagesrc="https://img.1fichier.com/flags/en.png" selected="selected">English</option>
+			<option value="/?c9r46vpt91blmif793kj&amp;lg=fr" data-imagesrc="https://img.1fichier.com/flags/fr.png">Français</option>
+    </select>
+
+		<a class="ui-button ui-corner-all" href="https://1fichier.com/tarifs.html" title="Prices">Prices</a>
+
+		
+			<a class="ui-button ui-corner-all" href="https://1fichier.com/register.pl" title="Register">Register</a>
+			<a class="ui-button ui-corner-all" href="https://1fichier.com/login.pl" title="Login">My Account</a>
+		
+	</div>
+	<div class="spacer"></div>
+	
+  <div class="ct_warn" style="padding:0;margin:0;text-align:center;font-weight:bold;font-size:14px;height:35px;line-height:35px">
+		Christmas / New year offers : <span style="color:red">-50% minum</span> on yearly subscription <a href="/console/abo.pl?abo=3" style="color:red">Premium</a> and <a href="/console/abo.pl?abo=13" style="color:red">Access</a> !
+	</div>
+  <span class="spacer" style="height:1px"></span>
+
+	
+</div>
+<div class="spacer" style="height:140px"></div>
+
+<form accept-charset="UTF-8" method="post" action="https://1fichier.com/?c9r46vpt91blmif793kj" style="min-width:1000px;margin:auto" class="alc">
+
+	
+
+	
+	
+	<input type="hidden" name="adzone" value="726.862172505916" />
+	<!-- banner728 divAdd_Right remove_ads_button2 ##.gallery-ad /adways- -->
+
+  
+
+  
+
+		
+
+	
+		
+			
+				
+					<span class="spacer spacer-20"></span>
+					<div id="taboola-below-main-column-thumbnails" style="padding-left:30px;padding-right:30px;max-width:1000px;margin:auto"></div>
+					<script type="text/javascript">window._taboola = window._taboola || []; _taboola.push({ mode: 'thumbnails-a', container: 'taboola-below-main-column-thumbnails', placement: 'Below Main Column Thumbnails', target_type: 'mix' });</script>
+				
+			
+		
+	
+
+	
+		<span class="spacer spacer-20"></span>
+		<table class="premium" style="width:900px;margin:10px auto" cellspacing="4">
+			<tr>
+				<td style="width:150px" rowspan="3" ><img style="vertical-align:middle" src="https://1fichier.com/qr.pl?do=0.c9r46vpt91blmif793kj&s=1" width="148" height="148" /></td>
+				<td class="titre normal" style="width:180px">Filename :</td>
+				<td class="normal">NewAlternianVers3-Regular.ttf</td>
+			</tr>
+			<tr><td class="titre normal">Date :</td><td class="normal">23/12/2018</td></tr>
+			<tr><td class="titre normal">Size :</td><td class="normal">12.14 KB</td></tr>
+			
+		</table>
+	
+
+	
+	
+	<span class="spacer spacer-10"></span>
+	<div style="width:350px;margin:auto;text-align:left;line-height:32px">
+		<label class="CKBL">	
+			<input type="checkbox" name="dl_no_ssl" />
+			<span></span>
+			Download without SSL encryption <a href="https://1fichier.com/hlp.html#securitesite"><img src="https://img.1fichier.com/icons/icon_question.png" style="width:18px;vertical-align:middle" /></a>
+		</label>
+		<label class="CKBL">
+			<input type="checkbox" name="dlinline" />
+			<span></span>
+			Inline download <a href="https://1fichier.com/hlp.html#dispositioninline"><img src="https://img.1fichier.com/icons/icon_question.png" style="width:18px;vertical-align:middle" /></a>
+		</label>
+		
+
+		
+	</div>
+	<span class="spacer spacer-10"></span>
+	<input type="submit" value="Download" style="float:none;margin:auto;font-weight:bold;width:300px;height:50px;font-size:14px;border:2px solid red" class="ok btn-general btn-orange" />
+</form>
+
+<span class="spacer spacer-20"></span>
+
+
+	<span class="spacer spacer-20"></span>
+	<div id="taboola-below-article-thumbnails" style="padding-left:30px;padding-right:30px;max-width:1000px;margin:auto"></div>
+	<script type="text/javascript">window._taboola = window._taboola || []; _taboola.push({ mode: 'thumbnails-b', container: 'taboola-below-article-thumbnails', placement: 'Below Article Thumbnails', target_type: 'mix' }); </script>
+
+
+
+<span class="spacer" style="height:100px">&nbsp;</span>
+<div id="footer">
+	<div class="center-container">
+		<a href="https://1fichier.com" title="Back to home page"><img class="gauche" src="https://img.1fichier.com/logo-footer.png" alt="1fichier.com" /></a>
+		<div id="link-container">
+			<a href="https://1fichier.com/cgu.html">Legal &amp; Terms</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://1fichier.com/abus.html">Abuse</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://1fichier.com/tarifs.html">Prices</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://1fichier.com/revendeurs.html">Resellers</a>&nbsp;&nbsp;&nbsp;
+      <a href="https://1fichier.com/affiliation.html">Affiliation</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://1fichier.com/hlp.html">Help</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://1fichier.com/network.html">Network/Speedtest</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://1fichier.com/contact.html">Contact</a>
+      <br/>
+      <a target="_new" href="https://twitter.com/1fichiercom"><img src="https://img.1fichier.com/twitter.png" alt="Twitter" style="padding:0;border:0" /></a>&nbsp;&nbsp;&nbsp;
+      <a target="_new" href="https://facebook.com/1fichiercom"><img src="https://img.1fichier.com/facebook.png" alt="Facebook" style="padding:0;border:0" /></a>&nbsp;&nbsp;&nbsp;
+			<a href="https://1fichier.com/api.html" style="vertical-align:top">API</a>&nbsp;&nbsp;&nbsp;
+      <a href="https://1fichier.com/servers.html" style="vertical-align:top">Dedicated Servers</a>&nbsp;&nbsp;&nbsp;
+      <a target="_new" href="https://dstorage.fr" style="vertical-align:top">DStorage SASU © 2009-2018</a>
+		</div>
+	</div>
+	<span class="spacer"></span>
+</div>       
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<script src="https://www.ps7894.com/InterYield/bindevent.do?e=click&affiliate=dstorage&subid=dstorage&maxAdCountsPerInterval=0&ae=true&aecount=3&aedelay1=1&aedelay2=5&aedelay3=10&aesnooze=0&aeplus=true&snoozeMinutes=1&adCountIntervalHours=24&pop=under&attributionDisabled=true&endpoint=https%3A%2F%2Fwww.ps7894.com" type="text/javascript"></script>
+	<script type="text/javascript">(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.src="//brzadrs8n9.s.ad6media.fr/?d="+(new Date).getTime()+"&r=";try{a.src+=encodeURIComponent(top.document.referrer)}catch(c){a.src+=encodeURIComponent(document.referrer)}a.type="text/javascript";a.async=!0;b.parentNode.insertBefore(a,b)})();</script>
+  <script type="text/javascript">window._taboola = window._taboola || [];_taboola.push({flush: true});</script>
+
+	
+	
+
+</body>
+</html>
