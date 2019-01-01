@@ -12,12 +12,8 @@ import Motion from '../ui/util/optional_motion';
 import spring from 'react-motion/lib/spring';
 import SearchResultsContainer from './containers/search_results_container';
 import { changeComposing } from '../../actions/compose';
-<<<<<<< HEAD
 import elephantUIPlane from '../../../images/elephant_ui_plane.svg';
 import { mascot } from '../../initial_state';
-=======
-import elephantUIPlane from '../../../images/Yaldabaoth.png';
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 
 const messages = defineMessages({
   start: { id: 'getting_started.heading', defaultMessage: 'Getting started' },

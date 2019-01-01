@@ -4,7 +4,6 @@
 = simple_form_for @account, url: settings_profile_path, html: { method: :put } do |f|
   = render 'shared/error_messages', object: @account
 
-<<<<<<< HEAD
   .fields-row
     .fields-row__column.fields-group.fields-row__column-6
       = f.input :display_name, wrapper: :with_label, input_html: { maxlength: 30 }, hint: false
@@ -15,17 +14,8 @@
   .fields-row
     .fields-row__column.fields-row__column-6
       = render 'application/card', account: @account
-=======
-  .fields-group
-    = f.input :display_name, placeholder: t('simple_form.labels.defaults.display_name'), hint: t('simple_form.hints.defaults.display_name', count: 30 - @account.display_name.size).html_safe
-    = f.input :note, placeholder: t('simple_form.labels.defaults.note'), hint: t('simple_form.hints.defaults.note', count: 500 - @account.note.size).html_safe
-    = f.input :regex, placeholder: 'regex placeholder', hint: 'regex hint'
-    = f.input :quirk, placeholder: 'quirk placeholder', hint: 'quirk hint'
-    
-  = render 'application/card', account: @account
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 
-    .fields-row__column.fields-group.fields-row__column-6
+   .fields-row__column.fields-group.fields-row__column-6
       = f.input :avatar, wrapper: :with_label, input_html: { accept: AccountAvatar::IMAGE_MIME_TYPES.join(',') }, hint: t('simple_form.hints.defaults.avatar', dimensions: '400x400', size: number_to_human_size(AccountAvatar::LIMIT))
 
       = f.input :header, wrapper: :with_label, input_html: { accept: AccountHeader::IMAGE_MIME_TYPES.join(',') }, hint: t('simple_form.hints.defaults.header', dimensions: '1500x500', size: number_to_human_size(AccountHeader::LIMIT))

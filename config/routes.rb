@@ -285,12 +285,7 @@ Rails.application.routes.draw do
         end
       end
       resources :favourites,   only: [:index]
-<<<<<<< HEAD
       resources :reports,      only: [:create]
-=======
-      resources :bookmarks,    only: [:index]
-      resources :reports,      only: [:index, :create]
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
       resources :filters,      only: [:index, :create, :show, :update, :destroy]
       resources :endorsements, only: [:index]
 

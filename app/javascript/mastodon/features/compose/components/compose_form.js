@@ -85,11 +85,7 @@ class ComposeForm extends ImmutablePureComponent {
     const { is_submitting, is_uploading, anyMedia } = this.props;
     const fulltext = [this.props.spoiler_text, countableText(this.props.text)].join('');
 
-<<<<<<< HEAD
     if (is_submitting || is_uploading || length(fulltext) > 1200 || (fulltext.length !== 0 && fulltext.trim().length === 0 && !anyMedia)) {
-=======
-    if (is_submitting || is_uploading || length(fulltext) > maxChars || (fulltext.length !== 0 && fulltext.trim().length === 0 && !anyMedia)) {
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
       return;
     }
 
@@ -165,11 +161,7 @@ class ComposeForm extends ImmutablePureComponent {
     const { intl, onPaste, showSearch, anyMedia } = this.props;
     const disabled = this.props.is_submitting;
     const text     = [this.props.spoiler_text, countableText(this.props.text)].join('');
-<<<<<<< HEAD
     const disabledButton = disabled || this.props.is_uploading || length(text) > 1200 || (text.length !== 0 && text.trim().length === 0 && !anyMedia);
-=======
-    const disabledButton = disabled || this.props.is_uploading || length(text) > maxChars || (text.length !== 0 && text.trim().length === 0 && !anyMedia);
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
     let publishText = '';
 
     if (this.props.privacy === 'private' || this.props.privacy === 'direct') {
@@ -221,11 +213,7 @@ class ComposeForm extends ImmutablePureComponent {
             <SensitiveButtonContainer />
             <SpoilerButtonContainer />
           </div>
-<<<<<<< HEAD
           <div className='character-counter__wrapper'><CharacterCounter max={1200} text={text} /></div>
-=======
-          <div className='character-counter__wrapper'><CharacterCounter max={maxChars} text={text} /></div>
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
         </div>
 
         <div className='compose-form__publish'>

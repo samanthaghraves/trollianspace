@@ -31,17 +31,7 @@
     - if Setting.custom_css.present?
       = stylesheet_link_tag custom_css_path, media: 'all'
 
-<<<<<<< HEAD
     = yield :header_tags
-=======
-    -#  These must come after :header_tags to ensure our initial state has been defined.
-    = render partial: 'layouts/theme', object: @core
-    = render partial: 'layouts/theme', object: @theme
-
-  - body_classes ||= @body_classes || ''
-  - body_classes += ' system-font' if current_account&.user&.setting_system_font_ui
-  - body_classes += current_account&.user&.setting_reduce_motion ? ' reduce-motion' : ' no-reduce-motion'
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 
   %body{ class: body_classes }
     = content_for?(:content) ? yield(:content) : yield

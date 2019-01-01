@@ -58,11 +58,7 @@ Doorkeeper.configure do
   optional_scopes :write,
                   :'write:accounts',
                   :'write:blocks',
-<<<<<<< HEAD
                   :'write:conversations',
-=======
-                  :'write:bookmarks',
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
                   :'write:favourites',
                   :'write:filters',
                   :'write:follows',

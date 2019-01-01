@@ -8,14 +8,7 @@ const glob = require('glob');
 
 const configPath = resolve('config', 'webpacker.yml');
 const loadersDir = join(__dirname, 'loaders');
-<<<<<<< HEAD
 const settings = safeLoad(readFileSync(configPath), 'utf8')[env.RAILS_ENV || env.NODE_ENV];
-=======
-const settings = safeLoad(readFileSync(configPath), 'utf8')[env.NODE_ENV];
-const flavourFiles = glob.sync('app/javascript/flavours/*/theme.yml');
-const skinFiles = glob.sync('app/javascript/skins/*/*');
-const flavours = {};
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 
 const core = function () {
   const coreFile = resolve('app', 'javascript', 'core', 'theme.yml');

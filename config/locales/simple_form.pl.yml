@@ -19,12 +19,8 @@ pl:
         setting_default_language: Język Twoich wpisów może być wykrywany automatycznie, ale nie zawsze jest to dokładne
         setting_hide_network: Informacje o tym, kto Cię śledzi i kogo śledzisz nie będą widoczne
         setting_noindex: Wpływa na widoczność strony profilu i Twoich wpisów
-<<<<<<< HEAD
         setting_theme: Zmienia wygląd Mastodona po zalogowaniu z dowolnego urządzenia.
         whole_word: Jeśli słowo lub fraza składa się jedynie z liter lub cyfr, filtr będzie zastosowany tylko do pełnych wystąpień
-=======
-        setting_skin: Zmienia wygląd używanej odmiany Mastodona
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
       imports:
         data: Plik CSV wyeksportowany z innej instancji Mastodona
       sessions:
@@ -68,11 +64,6 @@ pl:
         setting_default_privacy: Widoczność wpisów
         setting_default_sensitive: Zawsze oznaczaj zawartość multimedialną jako wrażliwą
         setting_delete_modal: Pytaj o potwierdzenie przed usunięciem wpisu
-<<<<<<< HEAD
-=======
-        setting_display_sensitive_media: Zawsze oznaczaj zawartość multimedialną jako wrażliwą
-        setting_favourite_modal: Pytaj o potwierdzenie przed dodaniem do ulubionych
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
         setting_hide_network: Ukryj swoją sieć
         setting_noindex: Nie indeksuj mojego profilu w wyszukiwarkach internetowych
         setting_reduce_motion: Ogranicz ruch w animacjach

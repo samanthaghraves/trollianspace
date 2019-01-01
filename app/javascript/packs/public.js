@@ -4,7 +4,6 @@ import { start } from '../mastodon/common';
 
 start();
 
-<<<<<<< HEAD
 window.addEventListener('message', e => {
   const data = e.data || {};
 
@@ -26,8 +25,6 @@ window.addEventListener('message', e => {
   });
 });
 
-=======
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 function main() {
   const IntlMessageFormat = require('intl-messageformat').default;
   const { timeAgoString } = require('../mastodon/components/relative_timestamp');

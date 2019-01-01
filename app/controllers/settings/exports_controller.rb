@@ -3,14 +3,11 @@
 class Settings::ExportsController < Settings::BaseController
   include Authorization
 
-<<<<<<< HEAD
   layout 'admin'
 
   before_action :authenticate_user!
   before_action :set_body_classes
 
-=======
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
   def show
     @export  = Export.new(current_account)
     @backups = current_user.backups

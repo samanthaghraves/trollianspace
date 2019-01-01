@@ -168,20 +168,9 @@ class ApplicationController < ActionController::Base
     @current_session ||= SessionActivation.find_by(session_id: cookies.signed['_session_id'])
   end
 
-<<<<<<< HEAD
   def current_theme
     return Setting.theme unless Themes.instance.names.include? current_user&.setting_theme
     current_user.setting_theme
-=======
-  def current_flavour
-    return Setting.default_settings['flavour'] unless Themes.instance.flavours.include? current_user&.setting_flavour
-    current_user.setting_flavour
-  end
-
-  def current_skin
-    return 'default' unless Themes.instance.skins_for(current_flavour).include? current_user&.setting_skin
-    current_user.setting_skin
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
   end
 
   def cache_collection(raw, klass)

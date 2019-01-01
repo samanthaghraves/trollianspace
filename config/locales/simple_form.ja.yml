@@ -69,16 +69,11 @@ ja:
         setting_default_privacy: 投稿の公開範囲
         setting_default_sensitive: メディアを常に閲覧注意としてマークする
         setting_delete_modal: トゥートを削除する前に確認ダイアログを表示する
-<<<<<<< HEAD
         setting_display_media: メディアの表示
         setting_display_media_default: 標準
         setting_display_media_hide_all: 非表示
         setting_display_media_show_all: 表示
         setting_expand_spoilers: 閲覧注意としてマークされたトゥートを常に展開する
-=======
-        setting_display_sensitive_media: 閲覧注意としてマークされたメディアも常に表示する
-        setting_favourite_modal: お気に入りをする前に確認ダイアログを表示する
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
         setting_hide_network: 繋がりを隠す
         setting_noindex: 検索エンジンによるインデックスを拒否する
         setting_reduce_motion: アニメーションの動きを減らす

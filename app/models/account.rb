@@ -47,11 +47,7 @@
 #  fields                  :jsonb
 #  actor_type              :string
 #  quirk		   :text
-<<<<<<< HEAD
 #  regex                   :text
-=======
-#  regex		   :text
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 #
 
 class Account < ApplicationRecord
@@ -83,12 +79,8 @@ class Account < ApplicationRecord
   validates_with UniqueUsernameValidator, if: -> { local? && will_save_change_to_username? }
   validates_with UnreservedUsernameValidator, if: -> { local? && will_save_change_to_username? }
   validates :display_name, length: { maximum: 30 }, if: -> { local? && will_save_change_to_display_name? }
-<<<<<<< HEAD
   validates :note, length: { maximum: 413 }, if: -> { local? && will_save_change_to_note? }
   validate :note_has_fifteen_newlines?, if: -> { local? && will_save_change_to_note? }
-=======
-  validate :note_length_does_not_exceed_length_limit, if: -> { local? && will_save_change_to_note? }
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
   validates :fields, length: { maximum: 4 }, if: -> { local? && will_save_change_to_fields? }
 
   # Timelines

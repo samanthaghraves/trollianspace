@@ -12,13 +12,7 @@ class StatusPolicy < ApplicationPolicy
   end
 
   def show?
-<<<<<<< HEAD
     if requires_mention?
-=======
-    return false if local_only? && (current_account.nil? || !current_account.local?)
-
-    if direct?
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
       owned? || mention_exists?
     elsif private?
       owned? || following_author? || mention_exists?

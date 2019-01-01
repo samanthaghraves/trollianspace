@@ -7,11 +7,7 @@ class FiltersController < ApplicationController
 
   before_action :set_filters, only: :index
   before_action :set_filter, only: [:edit, :update, :destroy]
-<<<<<<< HEAD
   before_action :set_body_classes
-=======
-  before_action :set_pack
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 
   def index
     @filters = current_account.custom_filters

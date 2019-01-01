@@ -94,15 +94,9 @@ class User < ApplicationRecord
 
   has_many :session_activations, dependent: :destroy
 
-<<<<<<< HEAD
   delegate :auto_play_gif, :default_sensitive, :unfollow_modal, :boost_modal, :delete_modal,
            :reduce_motion, :system_font_ui, :noindex, :theme, :display_media, :hide_network,
            :expand_spoilers, :default_language, to: :settings, prefix: :setting, allow_nil: false
-=======
-  delegate :auto_play_gif, :default_sensitive, :unfollow_modal, :boost_modal, :favourite_modal, :delete_modal,
-           :reduce_motion, :system_font_ui, :noindex, :flavour, :skin, :display_sensitive_media, :hide_network,
-           :default_language, to: :settings, prefix: :setting, allow_nil: false
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 
   attr_reader :invite_code
 

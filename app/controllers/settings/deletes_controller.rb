@@ -2,13 +2,9 @@
 
 class Settings::DeletesController < Settings::BaseController
 
-<<<<<<< HEAD
   before_action :check_enabled_deletion
   before_action :authenticate_user!
   before_action :set_body_classes
-=======
-  prepend_before_action :check_enabled_deletion
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 
   def show
     @confirmation = Form::DeleteConfirmation.new

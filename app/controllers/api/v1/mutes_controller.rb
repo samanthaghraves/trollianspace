@@ -48,18 +48,12 @@ class Api::V1::MutesController < Api::BaseController
   end
 
   def prev_path
-<<<<<<< HEAD
     unless paginated_mutes.empty?
       api_v1_mutes_url pagination_params(since_id: pagination_since_id)
-=======
-    unless@data.empty?
-      url_for pagination_params(since_id: pagination_since_id)
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
     end
   end
 
   def pagination_max_id
-<<<<<<< HEAD
     paginated_mutes.last.id
   end
 
@@ -69,25 +63,6 @@ class Api::V1::MutesController < Api::BaseController
 
   def records_continue?
     paginated_mutes.size == limit_param(DEFAULT_ACCOUNTS_LIMIT)
-=======
-    if params[:action] == "details"
-      @mutes.last.id
-    else
-      @accounts.last.muted_by_ids.last
-    end
-  end
-
-  def pagination_since_id
-    if params[:action] == "details"
-      @mutes.first.id
-    else
-      @accounts.first.muted_by_ids.first
-    end
-  end
-
-  def records_continue?
-    @data.size == limit_param(DEFAULT_ACCOUNTS_LIMIT)
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
   end
 
   def pagination_params(core_params)

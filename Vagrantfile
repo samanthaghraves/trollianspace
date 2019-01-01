@@ -84,14 +84,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provider :virtualbox do |vb|
     vb.name = "mastodon"
-<<<<<<< HEAD
     vb.customize ["modifyvm", :id, "--memory", "2048"]
     # Increase the number of CPUs. Uncomment and adjust to
     # increase performance
     # vb.customize ["modifyvm", :id, "--cpus", "3"]
-=======
-    vb.customize ["modifyvm", :id, "--memory", "4096"]
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 
     # Disable VirtualBox DNS proxy to skip long-delay IPv6 resolutions.
     # https://github.com/mitchellh/vagrant/issues/1172

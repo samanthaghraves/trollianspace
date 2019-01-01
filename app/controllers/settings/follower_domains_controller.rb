@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-<<<<<<< HEAD
 class Settings::FollowerDomainsController < ApplicationController
   layout 'admin'
 
   before_action :authenticate_user!
   before_action :set_body_classes
-=======
-require 'sidekiq-bulk'
->>>>>>> 7dd17d4e7bf91bf58e88f009bd39c94b24ae0d62
 
 class Settings::FollowerDomainsController < Settings::BaseController
   def show
