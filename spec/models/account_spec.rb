@@ -275,7 +275,7 @@ RSpec.describe Account, type: :model do
 
     subject { Fabricate(:account) }
 
-    context 'when the status is a reblog of another status'do
+    context 'when the status is a reblog of another status' do
       let(:original_reblog) do
         author = Fabricate(:account, username: 'original_reblogger')
         Fabricate(:status, reblog: original_status, account: author)
@@ -559,7 +559,7 @@ RSpec.describe Account, type: :model do
     end
 
     context 'when is local' do
-      it 'is invalid if the username is not unique in case-insensitive comparsion among local accounts' do
+      it 'is invalid if the username is not unique in case-insensitive comparison among local accounts' do
         account_1 = Fabricate(:account, username: 'the_doctor')
         account_2 = Fabricate.build(:account, username: 'the_Doctor')
         account_2.valid?
@@ -596,8 +596,8 @@ RSpec.describe Account, type: :model do
         expect(account).to model_have_error_on_field(:display_name)
       end
 
-      it 'is invalid if the note is longer than 500 characters' do
-        account = Fabricate.build(:account, note: Faker::Lorem.characters(501))
+      it 'is invalid if the note is longer than 413 characters' do
+        account = Fabricate.build(:account, note: Faker::Lorem.characters(414))
         account.valid?
         expect(account).to model_have_error_on_field(:note)
       end
@@ -618,8 +618,14 @@ RSpec.describe Account, type: :model do
         expect(account).not_to model_have_error_on_field(:username)
       end
 
-      it 'is invalid if the username doesn\'t only contains letters, numbers and underscores' do
+      it 'is valid even if the username contains hyphens' do
         account = Fabricate.build(:account, domain: 'domain', username: 'the-doctor')
+        account.valid?
+        expect(account).to_not model_have_error_on_field(:username)
+      end
+
+      it 'is invalid if the username doesn\'t only contains letters, numbers, underscores and hyphens' do
+        account = Fabricate.build(:account, domain: 'domain', username: 'the doctor')
         account.valid?
         expect(account).to model_have_error_on_field(:username)
       end
@@ -636,8 +642,8 @@ RSpec.describe Account, type: :model do
         expect(account).not_to model_have_error_on_field(:display_name)
       end
 
-      it 'is valid even if the note is longer than 500 characters' do
-        account = Fabricate.build(:account, domain: 'domain', note: Faker::Lorem.characters(501))
+      it 'is valid even if the note is longer than 413 characters' do
+        account = Fabricate.build(:account, domain: 'domain', note: Faker::Lorem.characters(414))
         account.valid?
         expect(account).not_to model_have_error_on_field(:note)
       end

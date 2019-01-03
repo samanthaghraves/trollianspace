@@ -62,6 +62,10 @@ const emojify = (str, customEmojis = {}) => {
       const title = shortCode ? `:${shortCode}:` : '';
       replacement = `<img draggable="false" class="emojione" alt="${match}" title="${title}" src="${assetHost}/emoji/${filename}.svg" />`;
       rend = i + match.length;
+      // If the matched character was followed by VS15 (for selecting text presentation), skip it.
+      if (str.codePointAt(rend) === 65038) {
+        rend += 1;
+      }
     }
     rtn += str.slice(0, i) + replacement;
     str = str.slice(rend);
@@ -69,7 +73,12 @@ const emojify = (str, customEmojis = {}) => {
   return rtn + str;
 };
 
-export default emojify;
+const emojify_bbcode = (str, customEmojis = {}) => [
+  { re: /<span class="bbcode__color" data-bbcodecolor="/g, mode: 'color' },
+  { re: /<span class="bbcode__size" data-bbcodesize="/g, mode: 'font-size' },
+].reduce((text, e) => text.replace(e.re, `<span style="${e.mode}: `), emojify(str, customEmojis));
+
+export default emojify_bbcode;
 
 export const buildCustomEmojis = (customEmojis) => {
   const emojis = [];

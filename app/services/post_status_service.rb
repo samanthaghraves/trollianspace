@@ -93,7 +93,22 @@ class PostStatusService < BaseService
     return if account.following?(status.in_reply_to_account_id)
     PotentialFriendshipTracker.record(account.id, status.in_reply_to_account_id, :reply)
   end
-   
+
+  def safe_hold(text, list)
+    output = text
+    list.each do |term|
+      output = output.sub(term,"۝")
+    end
+    return output
+  end
+
+  def safe_return(text, list)
+    output = text
+    list.each do |term|
+      output = output.sub("۝",term)
+    end
+    return output
+  end
 
   def quirkify_text(account, text)
     result = text
@@ -101,20 +116,13 @@ class PostStatusService < BaseService
     regexes = account.regex.split(',')
     
     if quirks.length == regexes.length
-      qrs = quirks.zip(regexes)
-      result = result.split.reduce("") do |acc_res, curr|
-        if (not Account::MENTION_RE.match?(curr)) && (not (/\Ahttps?:\/\/(www\.)?/).match?(curr))
-          acc_res + " " + qrs.reduce(curr) { |acc, qr|
-            quirk, regex = qr
-            if (not quirk.empty?) && (not regex.empty?)
-              acc = acc.gsub(Regexp.new(regex), quirk)
-            end
-            acc
-          }
-        else acc_res + " " + curr
-        end
+      regexes.length.times do |i|
+      exceptions = result.scan(/(?::\w+:|@\S+|https?:\/\/\S+|\[[^\]]+\])/)
+      result = safe_hold(result, exceptions)
+      result = result.gsub(Regexp.new(regexes[i]), quirks[i])
+      result = safe_return(result, exceptions)
       end
     end
-    result
+    return result
   end
 end

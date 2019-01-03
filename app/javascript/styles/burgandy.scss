@@ -1,0 +1,42 @@
+////////////////////////////////////////////////////
+//  Witches.Town theme
+//  Originally by Alda and Sylvhem of witches.town
+//  provided under the AGPL license
+////////////////////////////////////////////////////
+
+// Colors
+$ui-base-color: #9b060c;
+$ui-base-lighter-color: #D6BDBE;
+$ui-primary-color: #FAE6E6;
+$ui-secondary-color: #ffd3d3;
+$ui-highlight-color: #BD8888;
+
+// Columns width
+div.column {
+  flex-grow: 1;
+}
+
+// Fonts
+@font-face {
+  font-family: "Courier New", Courier, monospace;
+}
+
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+
+div {
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+button {
+  font-family: "Courier New", Courier, monospace;
+}
+
+// Import defaults
+@import 'application';
+

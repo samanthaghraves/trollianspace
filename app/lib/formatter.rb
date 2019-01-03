@@ -23,25 +23,28 @@ class Formatter
 
     unless status.local?
       html = reformat(raw_content)
-      html = encode_custom_emojis(html, status.emojis) if options[:custom_emojify]
+      html = encode_custom_emojis(html, status.emojis, options[:autoplay]) if options[:custom_emojify]
+      html = format_bbcode(html)
       return html.html_safe # rubocop:disable Rails/OutputSafety
     end
 
-    linkable_accounts = status.mentions.map(&:account)
+    linkable_accounts = status.active_mentions.map(&:account)
     linkable_accounts << status.account
 
     html = raw_content
     html = "RT @#{prepend_reblog} #{html}" if prepend_reblog
     html = encode_and_link_urls(html, linkable_accounts)
-    html = encode_custom_emojis(html, status.emojis) if options[:custom_emojify]
+    html = encode_custom_emojis(html, status.emojis, options[:autoplay]) if options[:custom_emojify]
     html = simple_format(html, {}, sanitize: false)
     html = html.delete("\n")
+    html = format_bbcode(html)
 
     html.html_safe # rubocop:disable Rails/OutputSafety
   end
 
   def reformat(html)
-    sanitize(html, Sanitize::Config::MASTODON_STRICT)
+    html = sanitize(html, Sanitize::Config::MASTODON_STRICT)
+    format_bbcode(html)
   end
 
   def plaintext(status)
@@ -53,7 +56,8 @@ class Formatter
 
   def simplified_format(account, **options)
     html = account.local? ? linkify(account.note) : reformat(account.note)
-    html = encode_custom_emojis(html, account.emojis) if options[:custom_emojify]
+    html = encode_custom_emojis(html, account.emojis, options[:autoplay]) if options[:custom_emojify]
+
     html.html_safe # rubocop:disable Rails/OutputSafety
   end
 
@@ -61,22 +65,22 @@ class Formatter
     Sanitize.fragment(html, config)
   end
 
-  def format_spoiler(status)
+  def format_spoiler(status, **options)
     html = encode(status.spoiler_text)
-    html = encode_custom_emojis(html, status.emojis)
+    html = encode_custom_emojis(html, status.emojis, options[:autoplay])
     html.html_safe # rubocop:disable Rails/OutputSafety
   end
 
   def format_display_name(account, **options)
     html = encode(account.display_name.presence || account.username)
-    html = encode_custom_emojis(html, account.emojis) if options[:custom_emojify]
+    html = encode_custom_emojis(html, account.emojis, options[:autoplay]) if options[:custom_emojify]
     html.html_safe # rubocop:disable Rails/OutputSafety
   end
 
   def format_field(account, str, **options)
     return reformat(str).html_safe unless account.local? # rubocop:disable Rails/OutputSafety
     html = encode_and_link_urls(str, me: true)
-    html = encode_custom_emojis(html, account.emojis) if options[:custom_emojify]
+    html = encode_custom_emojis(html, account.emojis, options[:autoplay]) if options[:custom_emojify]
     html.html_safe # rubocop:disable Rails/OutputSafety
   end
 
@@ -84,14 +88,19 @@ class Formatter
     html = encode_and_link_urls(text)
     html = simple_format(html, {}, sanitize: false)
     html = html.delete("\n")
+    html = format_bbcode(html)
 
     html.html_safe # rubocop:disable Rails/OutputSafety
   end
 
   private
 
+  def html_entities
+    @html_entities ||= HTMLEntities.new
+  end
+
   def encode(html)
-    HTMLEntities.new.encode(html)
+    html_entities.encode(html)
   end
 
   def encode_and_link_urls(html, accounts = nil, options = {})
@@ -120,10 +129,14 @@ class Formatter
     end
   end
 
-  def encode_custom_emojis(html, emojis)
+  def encode_custom_emojis(html, emojis, animate = false)
     return html if emojis.empty?
 
-    emoji_map = emojis.map { |e| [e.shortcode, full_asset_url(e.image.url(:static))] }.to_h
+    emoji_map = if animate
+                  emojis.each_with_object({}) { |e, h| h[e.shortcode] = full_asset_url(e.image.url) }
+                else
+                  emojis.each_with_object({}) { |e, h| h[e.shortcode] = full_asset_url(e.image.url(:static)) }
+                end
 
     i                     = -1
     tag_open_index        = nil
@@ -139,7 +152,7 @@ class Formatter
         emoji     = emoji_map[shortcode]
 
         if emoji
-          replacement = "<img draggable=\"false\" class=\"emojione\" alt=\":#{shortcode}:\" title=\":#{shortcode}:\" src=\"#{emoji}\" />"
+          replacement = "<img draggable=\"false\" class=\"emojione\" alt=\":#{encode(shortcode)}:\" title=\":#{encode(shortcode)}:\" src=\"#{encode(emoji)}\" />"
           before_html = shortname_start_index.positive? ? html[0..shortname_start_index - 1] : ''
           html        = before_html + replacement + html[i + 1..-1]
           i          += replacement.size - (shortcode.size + 2) - 1
@@ -208,7 +221,7 @@ class Formatter
     return link_to_account(acct) unless linkable_accounts
 
     account = linkable_accounts.find { |item| TagManager.instance.same_acct?(item.acct, acct) }
-    account ? mention_html(account) : "@#{acct}"
+    account ? mention_html(account) : "@#{encode(acct)}"
   end
 
   def link_to_account(acct)
@@ -217,7 +230,7 @@ class Formatter
     domain  = nil if TagManager.instance.local_domain?(domain)
     account = EntityCache.instance.mention(username, domain)
 
-    account ? mention_html(account) : "@#{acct}"
+    account ? mention_html(account) : "@#{encode(acct)}"
   end
 
   def link_to_hashtag(entity)
@@ -235,10 +248,96 @@ class Formatter
   end
 
   def hashtag_html(tag)
-    "<a href=\"#{tag_url(tag.downcase)}\" class=\"mention hashtag\" rel=\"tag\">#<span>#{tag}</span></a>"
+    "<a href=\"#{encode(tag_url(tag.downcase))}\" class=\"mention hashtag\" rel=\"tag\">#<span>#{encode(tag)}</span></a>"
   end
 
   def mention_html(account)
-    "<span class=\"h-card\"><a href=\"#{TagManager.instance.url_for(account)}\" class=\"u-url mention\">@<span>#{account.username}</span></a></span>"
+    "<span class=\"h-card\"><a href=\"#{encode(TagManager.instance.url_for(account))}\" class=\"u-url mention\">@<span>#{encode(account.username)}</span></a></span>"
+  end
+ 
+  def format_bbcode(html)
+    begin
+      html = html.bbcode_to_html(false, {
+        :spin => {
+          :html_open => '<span class="bbcode__spin">', :html_close => '</span>',
+          :description => 'Make text spin',
+          :example => 'This is [spin]spin[/spin].'},
+        :pulse => {
+          :html_open => '<span class="bbcode__pulse">', :html_close => '</span>',
+          :description => 'Make text pulse',
+          :example => 'This is [pulse]pulse[/pulse].'},
+        :b => {
+          :html_open => '<span class="bbcode__b">', :html_close => '</span>',
+          :description => 'Make text bold',
+          :example => 'This is [b]bold[/b].'},
+        :i => {
+          :html_open => '<span class="bbcode__i">', :html_close => '</span>',
+          :description => 'Make text italic',
+          :example => 'This is [i]italic[/i].'},
+        :flip => {
+          :html_open => '<span class="bbcode__flip-%direction%">', :html_close => '</span>',
+          :description => 'Flip text',
+          :example => '[flip=horizontal]This is flip[/flip]',
+          :allow_quick_param => true, :allow_between_as_param => false,
+          :quick_param_format => /(horizontal|vertical)/,
+          :quick_param_format_description => 'The size parameter \'%param%\' is incorrect, a number is expected',
+          :param_tokens => [{:token => :direction}]},
+        :large => {
+          :html_open => '<span class="bbcode__large-%size%">', :html_close => '</span>',
+          :description => 'Large text',
+          :example => '[large=2x]Large text[/large]',
+          :allow_quick_param => true, :allow_between_as_param => false,
+          :quick_param_format => /(2x|3x|4x|5x)/,
+          :quick_param_format_description => 'The size parameter \'%param%\' is incorrect, a number is expected',
+          :param_tokens => [{:token => :size}]},
+        :size => {
+          :html_open => '<span class="bbcode__size" data-bbcodesize="%size%px">', :html_close => '</span>',
+          :description => 'Change the size of the text',
+          :example => '[size=32]This is 32px[/size]',
+          :allow_quick_param => true, :allow_between_as_param => false,
+          :quick_param_format => /(\d+)/,
+          :quick_param_format_description => 'The size parameter \'%param%\' is incorrect, a number is expected',
+          :param_tokens => [{:token => :size}]},
+        :color => {
+          :html_open => '<span class="bbcode__color" data-bbcodecolor="%color%">', :html_close => '</span>',
+          :description => 'Use color',
+          :example => '[color=red]This is red[/color]',
+          :allow_quick_param => true, :allow_between_as_param => false,
+          :quick_param_format => /([a-z]+)/i,
+          :param_tokens => [{:token => :color}]},
+        :colorhex => {
+          :html_open => '<span class="bbcode__color" data-bbcodecolor="#%colorcode%">', :html_close => '</span>',
+          :description => 'Use color code',
+          :example => '[colorhex=ffffff]White text[/colorhex]',
+          :allow_quick_param => true, :allow_between_as_param => false,
+          :quick_param_format => /([0-9a-fA-F]{6})/,
+          :quick_param_format_description => 'The size parameter \'%param%\' is incorrect',
+          :param_tokens => [{:token => :colorcode}]},
+        :faicon => {
+          :html_open => '<span class="fa fa-%between% bbcode__faicon" style="display: none"></span><span class="faicon_FTL">%between%</span>', :html_close => '',
+          :description => 'Use Font Awesome Icons',
+          :example => '[faicon]users[/faicon]',
+          :only_allow => [],
+          :require_between => true},
+        :quote => {
+          :html_open => '<div class="bbcode__quote">', :html_close => '</div>',
+          :description => 'Quote',
+          :example => 'This is [quote]quote[/quote].'},
+        :code => {
+          :html_open => '<div class="bbcode__code">', :html_close => '</div>',
+          :description => 'Code',
+          :example => 'This is [code]Code[/code].'},
+        :u => {
+          :html_open => '<span class="bbcode__u">', :html_close => '</span>',
+          :description => 'Under line',
+          :example => 'This is [u]Under line[/u].'},
+        :s => {
+          :html_open => '<span class="bbcode__s">', :html_close => '</span>',
+          :description => 'line through',
+          :example => 'This is [s]line through[/s].'},
+      }, :enable, :i, :b, :color, :quote, :code, :size, :u, :s, :spin, :pulse, :flip, :large, :colorhex, :faicon)
+    rescue Exception => e
+    end
+    html
   end
 end

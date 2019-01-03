@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
-require 'sidekiq-bulk'
+class Settings::FollowerDomainsController < ApplicationController
+  layout 'admin'
+
+  before_action :authenticate_user!
+  before_action :set_body_classes
 
 class Settings::FollowerDomainsController < Settings::BaseController
   def show
@@ -22,5 +26,9 @@ class Settings::FollowerDomainsController < Settings::BaseController
 
   def bulk_params
     params.permit(select: [])
+  end
+
+  def set_body_classes
+    @body_classes = 'admin'
   end
 end

@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
   rescue_from Mastodon::NotPermittedError, with: :forbidden
 
   before_action :store_current_location, except: :raise_not_found, unless: :devise_controller?
-  before_action :check_suspension, if: :user_signed_in?
+  before_action :check_user_permissions, if: :user_signed_in?
 
   def raise_not_found
     raise ActionController::RoutingError, "No route matches #{params[:unmatched_route]}"
@@ -49,8 +49,8 @@ class ApplicationController < ActionController::Base
     forbidden unless current_user&.staff?
   end
 
-  def check_suspension
-    forbidden if current_user.account.suspended?
+  def check_user_permissions
+    forbidden if current_user.disabled? || current_user.account.suspended?
   end
 
   def after_sign_out_path_for(_resource_or_scope)
@@ -128,6 +128,10 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def truthy_param?(key)
+    ActiveModel::Type::Boolean.new.cast(params[key])
+  end
+
   def forbidden
     respond_with_error(403)
   end
@@ -164,14 +168,9 @@ class ApplicationController < ActionController::Base
     @current_session ||= SessionActivation.find_by(session_id: cookies.signed['_session_id'])
   end
 
-  def current_flavour
-    return Setting.default_settings['flavour'] unless Themes.instance.flavours.include? current_user&.setting_flavour
-    current_user.setting_flavour
-  end
-
-  def current_skin
-    return 'default' unless Themes.instance.skins_for(current_flavour).include? current_user&.setting_skin
-    current_user.setting_skin
+  def current_theme
+    return Setting.theme unless Themes.instance.names.include? current_user&.setting_theme
+    current_user.setting_theme
   end
 
   def cache_collection(raw, klass)
@@ -184,7 +183,7 @@ class ApplicationController < ActionController::Base
     klass.reload_stale_associations!(cached_keys_with_value.values) if klass.respond_to?(:reload_stale_associations!)
 
     unless uncached_ids.empty?
-      uncached = klass.where(id: uncached_ids).with_includes.map { |item| [item.id, item] }.to_h
+      uncached = klass.where(id: uncached_ids).with_includes.each_with_object({}) { |item, h| h[item.id] = item }
 
       uncached.each_value do |item|
         Rails.cache.write(item, item)
@@ -197,6 +196,7 @@ class ApplicationController < ActionController::Base
   def respond_with_error(code)
     respond_to do |format|
       format.any  { head code }
+
       format.html do
         set_locale
         use_pack 'error'
